@@ -78,7 +78,7 @@ color: #fff;</string>
          <x>0</x>
          <y>0</y>
          <width>1280</width>
-         <height>968</height>
+         <height>966</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1175,7 +1175,7 @@ border-radius: 10px;</string>
                 <x>0</x>
                 <y>0</y>
                 <width>1278</width>
-                <height>421</height>
+                <height>422</height>
                </rect>
               </property>
               <property name="maximumSize">
