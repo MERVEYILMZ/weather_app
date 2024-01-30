@@ -149,73 +149,6 @@ QComboBox QAbstractItemView {
            <property name="spacing">
             <number>0</number>
            </property>
-           <item row="3" column="0">
-            <widget class="QFrame" name="top_frame_2">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>62</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>62</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_2">
-              <item row="0" column="0" alignment="Qt::AlignTop">
-               <widget class="QLabel" name="label_4">
-                <property name="font">
-                 <font>
-                  <family>Open Sans Extrabold</family>
-                  <pointsize>15</pointsize>
-                  <weight>50</weight>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">color: rgb(252, 255, 255)</string>
-                </property>
-                <property name="text">
-                 <string>Weather Information For:</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="weather_location">
-                <property name="font">
-                 <font>
-                  <family>Adobe Kaiti Std R</family>
-                  <pointsize>13</pointsize>
-                  <weight>75</weight>
-                  <italic>false</italic>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Loading weather location (City, Region/State, Population Info)</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
            <item row="5" column="0">
             <widget class="QProgressBar" name="progressBar">
              <property name="enabled">
@@ -258,814 +191,6 @@ QProgressBar::chunk{
              <property name="invertedAppearance">
               <bool>false</bool>
              </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_18">
-             <property name="font">
-              <font>
-               <family>Adobe Garamond Pro Bold</family>
-               <pointsize>12</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: rgb(252, 255, 255)</string>
-             </property>
-             <property name="text">
-              <string>  &lt;&lt;&lt; SELECT LOCATION &gt;&gt;&gt;</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QFrame" name="top_frame">
-             <property name="minimumSize">
-              <size>
-               <width>882</width>
-               <height>62</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>62</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-bottom: 2px solid rgb(154, 148, 196)</string>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <layout class="QGridLayout" name="gridLayout">
-              <item row="1" column="3">
-               <widget class="QComboBox" name="city_list">
-                <property name="font">
-                 <font>
-                  <family>Sitka Banner</family>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">padding: 5px;
-border: 1px solid rgb(255, 255, 255);
-border-radius: 10px;
-color: rgb(252, 191, 130);</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QComboBox" name="country_list">
-                <property name="font">
-                 <font>
-                  <family>Sitka Banner</family>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">padding: 5px;
-border: 1px solid rgb(255, 255, 255);
-border-radius: 10px;
-color: rgb(252, 191, 130);</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_3">
-                <property name="font">
-                 <font>
-                  <family>Sitka Banner</family>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">padding: 5px;
-border: 1px solid rgb(255, 255, 255);
-border-radius: 10px;</string>
-                </property>
-                <property name="text">
-                 <string>Select Country &gt;&gt;&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QLabel" name="label_2">
-                <property name="font">
-                 <font>
-                  <family>Sitka Banner</family>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">padding: 5px;
-border: 1px solid rgb(255, 255, 255);
-border-radius: 10px;</string>
-                </property>
-                <property name="text">
-                 <string>Select City &gt;&gt;&gt;</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QFrame" name="frame">
-             <property name="styleSheet">
-              <string notr="true">QFrame{border-top: 2px solid rgb(154, 148, 196)}</string>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_2">
-              <item>
-               <widget class="QFrame" name="middle_frame">
-                <property name="styleSheet">
-                 <string notr="true">border: none;</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_2">
-                 <item>
-                  <widget class="QFrame" name="frame_4">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>562</width>
-                     <height>150</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgb(27, 29, 35);
-padding: 10px;
-border-radius: 20px;</string>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <widget class="QLabel" name="label_14">
-                    <property name="geometry">
-                     <rect>
-                      <x>300</x>
-                      <y>70</y>
-                      <width>50</width>
-                      <height>50</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">padding: 5px;
-border: 2px solid rgb(255, 255, 255);
-border-radius: 20px;
-color: rgb(252, 191, 130);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap>images/humidity.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="label_15">
-                    <property name="geometry">
-                     <rect>
-                      <x>999</x>
-                      <y>19</y>
-                      <width>50</width>
-                      <height>50</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">padding: 5px;
-border: 2px solid rgb(103, 103, 103);
-border-radius: 20px;
-color: rgb(252, 191, 130);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap>:/weather/icons/weather/png/001-cloudy day.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="latitude_label_2">
-                    <property name="geometry">
-                     <rect>
-                      <x>1055</x>
-                      <y>19</y>
-                      <width>129</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(173, 167, 220);</string>
-                    </property>
-                    <property name="text">
-                     <string>Please wait..</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="label_16">
-                    <property name="geometry">
-                     <rect>
-                      <x>20</x>
-                      <y>70</y>
-                      <width>50</width>
-                      <height>50</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">padding: 5px;
-border: 2px solid rgb(255, 255, 255);
-border-radius: 20px;
-color: rgb(252, 191, 130);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap>images/temperature.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="sunrise_label1_2">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>19</y>
-                      <width>161</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                      <underline>true</underline>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>TEMPERATURE</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="latitude_label1_2">
-                    <property name="geometry">
-                     <rect>
-                      <x>290</x>
-                      <y>19</y>
-                      <width>111</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                      <underline>true</underline>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>HUMIDITY</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="sunrise_label_2">
-                    <property name="geometry">
-                     <rect>
-                      <x>80</x>
-                      <y>80</y>
-                      <width>141</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>14</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(173, 167, 220);</string>
-                    </property>
-                    <property name="text">
-                     <string>Please wait..</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="longitude_label_2">
-                    <property name="geometry">
-                     <rect>
-                      <x>350</x>
-                      <y>80</y>
-                      <width>141</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>14</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(173, 167, 220);</string>
-                    </property>
-                    <property name="text">
-                     <string>Please wait..</string>
-                    </property>
-                   </widget>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="current_weather_frame">
-                   <property name="minimumSize">
-                    <size>
-                     <width>200</width>
-                     <height>200</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>200</width>
-                     <height>200</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">padding: 5px;
-border: 5px solid rgb(255, 255, 255);
-border-radius: 100px;
-color: rgb(252, 191, 130);</string>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_4">
-                    <item>
-                     <widget class="QLabel" name="current_weather_icon">
-                      <property name="minimumSize">
-                       <size>
-                        <width>100</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>100</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border: none;
-background: none;</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                      <property name="pixmap">
-                       <pixmap>:/weather/icons/weather/png/027-location.png</pixmap>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>true</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="current_weather_label">
-                      <property name="font">
-                       <font>
-                        <family>Adobe Caslon Pro</family>
-                        <pointsize>12</pointsize>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border: none;
-padding: 15px;
-color: rgb(255, 255, 255);
-background: none;</string>
-                      </property>
-                      <property name="text">
-                       <string>Please wait.. </string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                      <property name="wordWrap">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="frame_5">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>562</width>
-                     <height>150</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgb(27, 29, 35);
-padding: 10px;
-border-radius: 20px;</string>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <widget class="QLabel" name="label_17">
-                    <property name="geometry">
-                     <rect>
-                      <x>300</x>
-                      <y>70</y>
-                      <width>50</width>
-                      <height>50</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">padding: 5px;
-border: 2px solid rgb(255, 255, 255);
-border-radius: 20px;
-color: rgb(252, 191, 130);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap>images/sunrise.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="label_19">
-                    <property name="geometry">
-                     <rect>
-                      <x>999</x>
-                      <y>19</y>
-                      <width>50</width>
-                      <height>50</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">padding: 5px;
-border: 2px solid rgb(103, 103, 103);
-border-radius: 20px;
-color: rgb(252, 191, 130);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap>:/weather/icons/weather/png/001-cloudy day.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="latitude_label_3">
-                    <property name="geometry">
-                     <rect>
-                      <x>1055</x>
-                      <y>19</y>
-                      <width>129</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(173, 167, 220);</string>
-                    </property>
-                    <property name="text">
-                     <string>Please wait..</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="label_20">
-                    <property name="geometry">
-                     <rect>
-                      <x>20</x>
-                      <y>70</y>
-                      <width>50</width>
-                      <height>50</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>50</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">padding: 5px;
-border: 2px solid rgb(255, 255, 255);
-border-radius: 20px;
-color: rgb(252, 191, 130);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap>images/wind.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="sunrise_label1_3">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>19</y>
-                      <width>131</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                      <underline>true</underline>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>WIND</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="latitude_label1_3">
-                    <property name="geometry">
-                     <rect>
-                      <x>290</x>
-                      <y>19</y>
-                      <width>101</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                      <underline>true</underline>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>SUNRISE</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="sunrise_label_3">
-                    <property name="geometry">
-                     <rect>
-                      <x>80</x>
-                      <y>80</y>
-                      <width>141</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>14</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(173, 167, 220);</string>
-                    </property>
-                    <property name="text">
-                     <string>Please wait..</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="longitude_label_3">
-                    <property name="geometry">
-                     <rect>
-                      <x>350</x>
-                      <y>80</y>
-                      <width>141</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>14</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(173, 167, 220);</string>
-                    </property>
-                    <property name="text">
-                     <string>Please wait..</string>
-                    </property>
-                   </widget>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
             </widget>
            </item>
            <item row="0" column="0">
@@ -1175,7 +300,7 @@ border-radius: 10px;</string>
                 <x>0</x>
                 <y>0</y>
                 <width>1278</width>
-                <height>422</height>
+                <height>439</height>
                </rect>
               </property>
               <property name="maximumSize">
@@ -2454,6 +1579,764 @@ color: rgb(252, 255, 255)</string>
              </property>
             </widget>
            </item>
+           <item row="7" column="0">
+            <widget class="QFrame" name="frame">
+             <property name="styleSheet">
+              <string notr="true">QFrame{border-top: 2px solid rgb(154, 148, 196)}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QFrame" name="middle_frame">
+                <property name="styleSheet">
+                 <string notr="true">border: none;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <item>
+                  <widget class="QFrame" name="frame_4">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>562</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(27, 29, 35);
+padding: 10px;
+border-radius: 20px;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="label_14">
+                    <property name="geometry">
+                     <rect>
+                      <x>300</x>
+                      <y>70</y>
+                      <width>50</width>
+                      <height>50</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">padding: 5px;
+border: 2px solid rgb(255, 255, 255);
+border-radius: 20px;
+color: rgb(252, 191, 130);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap>images/humidity.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="label_15">
+                    <property name="geometry">
+                     <rect>
+                      <x>999</x>
+                      <y>19</y>
+                      <width>50</width>
+                      <height>50</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">padding: 5px;
+border: 2px solid rgb(103, 103, 103);
+border-radius: 20px;
+color: rgb(252, 191, 130);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap>:/weather/icons/weather/png/001-cloudy day.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="latitude_label_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>1055</x>
+                      <y>19</y>
+                      <width>129</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(173, 167, 220);</string>
+                    </property>
+                    <property name="text">
+                     <string>Please wait..</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="label_16">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>70</y>
+                      <width>50</width>
+                      <height>50</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">padding: 5px;
+border: 2px solid rgb(255, 255, 255);
+border-radius: 20px;
+color: rgb(252, 191, 130);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap>images/temperature.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="sunrise_label1_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>19</y>
+                      <width>161</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                      <underline>true</underline>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>TEMPERATURE</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="latitude_label1_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>290</x>
+                      <y>19</y>
+                      <width>111</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                      <underline>true</underline>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>HUMIDITY</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="sunrise_label_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>80</x>
+                      <y>80</y>
+                      <width>141</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>14</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(173, 167, 220);</string>
+                    </property>
+                    <property name="text">
+                     <string>Please wait..</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="longitude_label_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>350</x>
+                      <y>80</y>
+                      <width>141</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>14</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(173, 167, 220);</string>
+                    </property>
+                    <property name="text">
+                     <string>Please wait..</string>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="current_weather_frame">
+                   <property name="minimumSize">
+                    <size>
+                     <width>200</width>
+                     <height>200</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>200</width>
+                     <height>200</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">padding: 5px;
+border: 5px solid rgb(255, 255, 255);
+border-radius: 100px;
+color: rgb(252, 191, 130);</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_4">
+                    <item>
+                     <widget class="QLabel" name="current_weather_icon">
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border: none;
+background: none;</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>:/weather/icons/weather/png/027-location.png</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="current_weather_label">
+                      <property name="font">
+                       <font>
+                        <family>Adobe Caslon Pro</family>
+                        <pointsize>12</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border: none;
+padding: 15px;
+color: rgb(255, 255, 255);
+background: none;</string>
+                      </property>
+                      <property name="text">
+                       <string>Please wait.. </string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_5">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>562</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(27, 29, 35);
+padding: 10px;
+border-radius: 20px;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="label_17">
+                    <property name="geometry">
+                     <rect>
+                      <x>300</x>
+                      <y>70</y>
+                      <width>50</width>
+                      <height>50</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">padding: 5px;
+border: 2px solid rgb(255, 255, 255);
+border-radius: 20px;
+color: rgb(252, 191, 130);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap>images/sunrise.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="label_19">
+                    <property name="geometry">
+                     <rect>
+                      <x>999</x>
+                      <y>19</y>
+                      <width>50</width>
+                      <height>50</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">padding: 5px;
+border: 2px solid rgb(103, 103, 103);
+border-radius: 20px;
+color: rgb(252, 191, 130);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap>:/weather/icons/weather/png/001-cloudy day.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="latitude_label_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>1055</x>
+                      <y>19</y>
+                      <width>129</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(173, 167, 220);</string>
+                    </property>
+                    <property name="text">
+                     <string>Please wait..</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="label_20">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>70</y>
+                      <width>50</width>
+                      <height>50</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">padding: 5px;
+border: 2px solid rgb(255, 255, 255);
+border-radius: 20px;
+color: rgb(252, 191, 130);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap>images/wind.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="sunrise_label1_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>19</y>
+                      <width>131</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                      <underline>true</underline>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>WIND</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="latitude_label1_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>290</x>
+                      <y>19</y>
+                      <width>101</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                      <underline>true</underline>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>SUNRISE</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="sunrise_label_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>80</x>
+                      <y>80</y>
+                      <width>141</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>14</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(173, 167, 220);</string>
+                    </property>
+                    <property name="text">
+                     <string>Please wait..</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="longitude_label_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>350</x>
+                      <y>80</y>
+                      <width>141</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>14</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(173, 167, 220);</string>
+                    </property>
+                    <property name="text">
+                     <string>Please wait..</string>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QFrame" name="top_frame_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>62</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>62</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="0" alignment="Qt::AlignTop">
+               <widget class="QLabel" name="label_4">
+                <property name="font">
+                 <font>
+                  <family>Open Sans Extrabold</family>
+                  <pointsize>15</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(252, 255, 255)</string>
+                </property>
+                <property name="text">
+                 <string>Weather Information For:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="weather_location">
+                <property name="font">
+                 <font>
+                  <family>Adobe Kaiti Std R</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
+                  <italic>false</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Loading weather location (City, Region/State, Population Info)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
            <item row="6" column="0">
             <widget class="QFrame" name="message_frame">
              <property name="minimumSize">
@@ -2468,45 +2351,173 @@ color: rgb(252, 255, 255)</string>
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_5">
-              <property name="spacing">
-               <number>5</number>
+             <widget class="QLabel" name="label_5">
+              <property name="geometry">
+               <rect>
+                <x>6</x>
+                <y>6</y>
+                <width>248</width>
+                <height>20</height>
+               </rect>
               </property>
-              <property name="leftMargin">
-               <number>5</number>
+              <property name="font">
+               <font>
+                <family>Adobe Garamond Pro Bold</family>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
               </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="label_5">
-                <property name="font">
-                 <font>
-                  <family>Adobe Garamond Pro Bold</family>
-                  <pointsize>12</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border: none;
+              <property name="styleSheet">
+               <string notr="true">border: none;
 color: rgb(252, 255, 255)</string>
-                </property>
-                <property name="text">
-                 <string>&lt;&lt;&lt; CURRENT WEATHER &gt;&gt;&gt;</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-             </layout>
+              </property>
+              <property name="text">
+               <string>&lt;&lt;&lt; CURRENT WEATHER &gt;&gt;&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QFrame" name="top_frame">
+             <property name="minimumSize">
+              <size>
+               <width>882</width>
+               <height>62</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>62</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-bottom: 2px solid rgb(154, 148, 196)</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QComboBox" name="city_list">
+              <property name="geometry">
+               <rect>
+                <x>958</x>
+                <y>10</y>
+                <width>310</width>
+                <height>42</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Sitka Banner</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding: 5px;
+border: 1px solid rgb(255, 255, 255);
+border-radius: 40px;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="currentIndex">
+               <number>-1</number>
+              </property>
+             </widget>
+             <widget class="QComboBox" name="country_list">
+              <property name="geometry">
+               <rect>
+                <x>326</x>
+                <y>10</y>
+                <width>310</width>
+                <height>42</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Sitka Banner</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding: 5px;
+background-color: rgb(255, 255, 255);
+border: 1px solid rgb(255, 255, 255);
+border-radius: 40px;
+color: rgb(0, 0, 0);</string>
+              </property>
+              <property name="currentIndex">
+               <number>-1</number>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label">
+              <property name="geometry">
+               <rect>
+                <x>642</x>
+                <y>10</y>
+                <width>310</width>
+                <height>42</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <underline>false</underline>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="text">
+               <string>&gt;&gt;&gt;&gt;&gt;&gt; Select/Search City &gt;&gt;&gt;&gt;&gt;&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_2">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>310</width>
+                <height>42</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <underline>false</underline>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="text">
+               <string>&gt;&gt;&gt;&gt;&gt; Select/Search Country &gt;&gt;&gt;&gt;&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+             </widget>
             </widget>
            </item>
           </layout>
