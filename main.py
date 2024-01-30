@@ -1,9 +1,12 @@
-from pymongo import MongoClient, DESCENDING
+
+from pymongo import MongoClient,ASCENDING,DESCENDING
+from weather_api import WeatherApiClient
 from settings import MONGODB_URI
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QComboBox, QCompleter
 from PyQt5.QtCore import QStringListModel
 from PyQt5.uic import loadUi
+
 
 
 class MainWindow(QMainWindow):
@@ -17,6 +20,18 @@ class MainWindow(QMainWindow):
         self.country_list.currentIndexChanged.connect(self.populate_city_list)
         self.setup_completers()
         self.setup_styles()
+
+        #generate weatherapiclient with init
+        self.weather_api_client = WeatherApiClient()
+
+        # call this function whenever needed, preferably currentindexchanged for city
+        self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
+
+
+    def retrieve_weather_data(self,lat,lon):
+        result = self.weather_api_client.get_weather_data(lat, lon)
+        print (result)
+
 
     def connect_mongodb(self):
         self.client = MongoClient(MONGODB_URI)
@@ -80,3 +95,4 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
+
