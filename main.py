@@ -71,20 +71,22 @@ class MainWindow(QMainWindow):
     def setup_styles(self):
         style = """
             QComboBox { 
-                background-color: black; 
-                color: white; 
+                background-color: white; 
+                color: black; 
                 font-size: 20px;
             }
-            QComboBox::drop-down {
-                border: 0px;
-            }
+            
             QComboBox QAbstractItemView {
-                background-color: black;
-                color: white;
+                background-color: white;
+                color: black;
                 selection-background-color: gray;
+                font-size: 18px;
+
             }
             QComboBox QLineEdit {
-                color: white;  # Placeholder text color
+                color: black;  # Placeholder text color
+                font-size: 20px;
+
             }
         """
         self.country_list.setStyleSheet(style)
