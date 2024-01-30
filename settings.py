@@ -1,12 +1,13 @@
-# settings.py
+
+from config import MONGODB_URI, MONGODB_DATABASE, OPENWEATHER_KEY
 BOT_NAME = 'InfoTechWeatherApp'
 
 SPIDER_MODULES = ['InfoTechWeatherApp.spiders']
 NEWSPIDER_MODULE = 'InfoTechWeatherApp.spiders'
 
 # MongoDB settings
-MONGODB_URI = 'mongodb+srv://seanalone:Carry417641@cluster0.dvcnxfp.mongodb.net/'
-MONGODB_DATABASE = 'weather_database'
+MONGODB_URI = MONGODB_URI
+MONGODB_DATABASE = MONGODB_DATABASE
 
 ITEM_PIPELINES = {
     'InfoTechWeatherApp.pipelines.MongoPipeline': 300,
@@ -17,4 +18,4 @@ REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
-OPENWEATHER_KEY = "29bdfc5260cdadf37327329dd1afcb1b"
+OPENWEATHER_KEY = OPENWEATHER_KEY
