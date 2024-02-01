@@ -22,6 +22,7 @@ class MainWindow(QMainWindow):
         self.city_list.currentIndexChanged.connect(self.city_changed)
         self.setup_completers()
         self.setup_styles()
+        self.label_last_update.setText("")
         self.weather_api_client = WeatherApiClient()
 ############################################################################################################
     def city_changed(self):
@@ -42,6 +43,9 @@ class MainWindow(QMainWindow):
             self.update_current_weather(weather_data)
             self.update_hourly_forecast(hourly_data)
             self.update_daily_forecast(daily_data)
+            last_update = datetime.fromtimestamp(weather_data['dt'])
+            formatted_last_update = last_update.strftime("%d %b - %H:%M")
+            self.label_last_update.setText(f"<i>Last Updated on {formatted_last_update}</i>")
         except KeyError as e:
             print(f"Key error: {e}")
         except Exception as e:
