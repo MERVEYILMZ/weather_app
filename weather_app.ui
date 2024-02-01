@@ -967,9 +967,9 @@ background: none;</string>
                     <property name="geometry">
                      <rect>
                       <x>10</x>
-                      <y>90</y>
+                      <y>79</y>
                       <width>121</width>
-                      <height>50</height>
+                      <height>61</height>
                      </rect>
                     </property>
                     <property name="font">
@@ -1339,9 +1339,9 @@ background: none;</string>
                     <property name="geometry">
                      <rect>
                       <x>10</x>
-                      <y>90</y>
+                      <y>79</y>
                       <width>121</width>
-                      <height>50</height>
+                      <height>61</height>
                      </rect>
                     </property>
                     <property name="font">
@@ -1711,9 +1711,9 @@ background: none;</string>
                     <property name="geometry">
                      <rect>
                       <x>10</x>
-                      <y>90</y>
+                      <y>79</y>
                       <width>121</width>
-                      <height>50</height>
+                      <height>61</height>
                      </rect>
                     </property>
                     <property name="font">
