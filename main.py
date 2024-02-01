@@ -9,6 +9,9 @@ import requests
 from pymongo import MongoClient, DESCENDING
 from weather_api import WeatherApiClient
 from settings import MONGODB_URI
+from datetime import datetime
+from PyQt5.QtCore import QTimer, QDateTime
+
 
 ############################################################################################################
 class MainWindow(QMainWindow):
@@ -22,9 +25,26 @@ class MainWindow(QMainWindow):
         self.city_list.currentIndexChanged.connect(self.city_changed)
         self.setup_completers()
         self.setup_styles()
-        self.label_last_update.setText("")
+
+        # Display the current time and date.
+        self.update_datetime_label()
+        timer = QTimer(self)
+        # Set QTimer to trigger every second.
+        timer.timeout.connect(self.update_datetime_label)
+        timer.start(1000)  # The duration in milliseconds
+
+        # Generate WeatherApiClient with init
         self.weather_api_client = WeatherApiClient()
-############################################################################################################
+
+        # Call this function whenever needed, preferably currentIndexChanged for city
+        # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
+
+    def update_datetime_label(self):
+        bugun = QDateTime.currentDateTime()
+        tarih_ve_saat = bugun.toString("dd-MM-yyyy HH:mm")
+        self.date_label.setText(tarih_ve_saat)
+
+
     def city_changed(self):
         city_name = self.city_list.currentText()
         if city_name:
