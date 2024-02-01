@@ -26,11 +26,26 @@ class MainWindow(QMainWindow):
         self.setup_completers()
         self.setup_styles()
 
+        # Display the current time and date.
+        self.update_datetime_label()
+        timer = QTimer(self)
+        # Set QTimer to trigger every second.
+        timer.timeout.connect(self.update_datetime_label)
+        timer.start(1000)  # The duration in milliseconds
+
         # Generate WeatherApiClient with init
         self.weather_api_client = WeatherApiClient()
 
         # Call this function whenever needed, preferably currentIndexChanged for city
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
+
+
+
+    def update_datetime_label(self):
+        today = QDateTime.currentDateTime()
+        date = today.toString("dd-MM-yyyy HH:mm")
+        self.date_label.setText(date)
+############################################################################################################
 
     def city_changed(self):
         city_name = self.city_list.currentText()
