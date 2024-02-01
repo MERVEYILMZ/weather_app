@@ -160,7 +160,6 @@ class MainWindow(QMainWindow):
         """
         self.country_list.setStyleSheet(style)
         self.city_list.setStyleSheet(style)
-############################################################################################################
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
