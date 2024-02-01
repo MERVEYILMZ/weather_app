@@ -9,6 +9,9 @@ from PyQt5.uic import loadUi
 from datetime import datetime
 from PyQt5 import QtGui, QtCore
 import requests
+from datetime import datetime
+from PyQt5.QtCore import QTimer, QDateTime
+
 
 
 class MainWindow(QMainWindow):
@@ -24,11 +27,24 @@ class MainWindow(QMainWindow):
         self.setup_completers()
         self.setup_styles()
 
+        # Display the current time and date.
+        self.update_datetime_label()
+        timer = QTimer(self)
+        # Set QTimer to trigger every second.
+        timer.timeout.connect(self.update_datetime_label)
+        timer.start(1000)  # The duration in milliseconds
+
         # Generate WeatherApiClient with init
         self.weather_api_client = WeatherApiClient()
 
         # Call this function whenever needed, preferably currentIndexChanged for city
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
+
+    def update_datetime_label(self):
+        bugun = QDateTime.currentDateTime()
+        tarih_ve_saat = bugun.toString("dd-MM-yyyy HH:mm")
+        self.date_label.setText(tarih_ve_saat)
+
 
     def city_changed(self):
         # Get the selected city name
