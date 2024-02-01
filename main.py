@@ -112,15 +112,21 @@ class MainWindow(QMainWindow):
             icon_url = f"http://openweathermap.org/img/wn/{data['weather'][0]['icon']}.png"
             temp_label.setText(f"{temp_c:.1f}°C")
             self.set_icon(icon_label, icon_url)
+
 ############################################################################################################
     def update_daily_forecast(self, daily_data):
         for day_index in range(1, 4):  # For +1, +2, and +3 days
             temp_label = getattr(self, f"forecast_temp1_{day_index}")
             hum_label = getattr(self, f"forecast_hum1_{day_index}")
             wind_label = getattr(self, f"forecast_wind1_{day_index}")
+            forecast_weather_label = getattr(self, f"forecast_weather_label_{day_index}")
+            forecast_weather_icon = getattr(self, f"forecast_weather_icon_{day_index}")
+           
 
             # Get data for the corresponding day
             data = daily_data[day_index]
+            weather_desc = data['weather'][0]['description']
+            weather_icon = data['weather'][0]['icon']
             temp_day = data['temp']['day'] - 273.15
             humidity = data['humidity']
             wind_speed = data['wind_speed']
@@ -129,6 +135,12 @@ class MainWindow(QMainWindow):
             temp_label.setText(f"{temp_day:.1f}°C")
             hum_label.setText(f"Humidity: {humidity}%")
             wind_label.setText(f"Wind: {wind_speed} m/s")
+
+            icon_url_day = f"http://openweathermap.org/img/wn/{data['weather'][0]['icon']}.png"
+            forecast_weather_label.setText(weather_desc)
+            self.set_icon( forecast_weather_icon, icon_url_day)
+
+
 ############################################################################################################    
     
     def set_icon(self, label, icon_url):
