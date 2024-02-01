@@ -39,6 +39,7 @@ class MainWindow(QMainWindow):
         # Call this function whenever needed, preferably currentIndexChanged for city
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
 
+############################################################################################################
 
     # Display the current time and date.
     def update_datetime_label(self):
@@ -223,3 +224,5 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
+
+############################################################################################################
