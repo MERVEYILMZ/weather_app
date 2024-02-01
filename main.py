@@ -40,7 +40,7 @@ class MainWindow(QMainWindow):
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
 
 
-
+    # Display the current time and date.
     def update_datetime_label(self):
         today = QDateTime.currentDateTime()
         date = today.toString("dd-MM-yyyy HH:mm")
