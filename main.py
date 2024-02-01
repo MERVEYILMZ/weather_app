@@ -12,7 +12,6 @@ from settings import MONGODB_URI
 from datetime import datetime, timedelta
 from PyQt5.QtCore import QTimer, QDateTime
 
-
 ############################################################################################################
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -68,10 +67,12 @@ class MainWindow(QMainWindow):
                 lon = city_data.get('lon')
                 self.retrieve_weather_data(lat, lon)
                 self.weather_location.setText(f"{city_name}, {city_data.get('state_province')}, {city_data.get('population')} ")
+
 ############################################################################################################
     def retrieve_weather_data(self, lat, lon):
         try:
             result = self.weather_api_client.get_weather_data(lat, lon)
+            print(result)
             weather_data = result['weather_data']['current']
             hourly_data = result['weather_data']['hourly']
             daily_data = result['weather_data']['daily']
@@ -86,6 +87,7 @@ class MainWindow(QMainWindow):
             print(f"Key error: {e}")
         except Exception as e:
             print(f"An error occurred: {e}")
+
 ############################################################################################################
     def update_current_weather(self, weather_data):
         temperature_c = weather_data['temp'] - 273.15
@@ -112,7 +114,7 @@ class MainWindow(QMainWindow):
             data = hourly_data[i * 3 - 3]  # 0, 3, 6, 9 for +3, +6, +9, +12 hours
             temp_c = data['temp'] - 273.15
             icon_url = f"http://openweathermap.org/img/wn/{data['weather'][0]['icon']}.png"
-            temp_label.setText(f"Temperature: {temp_c:.1f}°C")
+            temp_label.setText(f"{temp_c:.1f}°C")
             self.set_icon(icon_label, icon_url)
             
             # Set the weather description to the corresponding label
@@ -138,9 +140,9 @@ class MainWindow(QMainWindow):
             wind_speed = data['wind_speed']
 
             # Update labels with forecast data
-            temp_label.setText(f"Temperature: {temp_day:.1f}°C")
-            hum_label.setText(f"Humidity: {humidity}%")
-            wind_label.setText(f"Wind: {wind_speed} m/s")
+            temp_label.setText(f"{temp_day:.1f}°C")
+            hum_label.setText(f"{humidity}%")
+            wind_label.setText(f"{wind_speed} m/s")
 
             icon_url_day = f"http://openweathermap.org/img/wn/{data['weather'][0]['icon']}.png"
             forecast_weather_label.setText(weather_desc)

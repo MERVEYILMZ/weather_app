@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1280</width>
-    <height>964</height>
+    <height>934</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -78,7 +78,7 @@ color: #fff;</string>
          <x>0</x>
          <y>0</y>
          <width>1280</width>
-         <height>964</height>
+         <height>934</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -172,7 +172,7 @@ QComboBox QAbstractItemView {
                 <x>0</x>
                 <y>0</y>
                 <width>1278</width>
-                <height>436</height>
+                <height>426</height>
                </rect>
               </property>
               <property name="maximumSize">
@@ -223,9 +223,9 @@ border: none;</string>
                 <widget class="QLabel" name="forecast_temp3">
                  <property name="geometry">
                   <rect>
-                   <x>80</x>
-                   <y>70</y>
-                   <width>221</width>
+                   <x>120</x>
+                   <y>10</y>
+                   <width>191</width>
                    <height>40</height>
                   </rect>
                  </property>
@@ -238,7 +238,7 @@ border: none;</string>
                  <property name="font">
                   <font>
                    <family>Adobe Caslon Pro</family>
-                   <pointsize>12</pointsize>
+                   <pointsize>18</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -249,11 +249,14 @@ border: none;</string>
                  <property name="text">
                   <string>Please wait..</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                 <widget class="QLabel" name="forecast_icon3">
                  <property name="geometry">
                   <rect>
-                   <x>19</x>
+                   <x>50</x>
                    <y>60</y>
                    <width>50</width>
                    <height>50</height>
@@ -293,9 +296,9 @@ color: rgb(252, 191, 130);</string>
                 <widget class="QLabel" name="forecast_time3">
                  <property name="geometry">
                   <rect>
-                   <x>0</x>
+                   <x>20</x>
                    <y>10</y>
-                   <width>85</width>
+                   <width>101</width>
                    <height>40</height>
                   </rect>
                  </property>
@@ -309,6 +312,8 @@ color: rgb(252, 191, 130);</string>
                   <font>
                    <family>Adobe Caslon Pro</family>
                    <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -325,8 +330,8 @@ color: rgb(252, 191, 130);</string>
                  <property name="geometry">
                   <rect>
                    <x>120</x>
-                   <y>0</y>
-                   <width>181</width>
+                   <y>50</y>
+                   <width>191</width>
                    <height>61</height>
                   </rect>
                  </property>
@@ -334,6 +339,8 @@ color: rgb(252, 191, 130);</string>
                   <font>
                    <family>Adobe Caslon Pro</family>
                    <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -377,7 +384,7 @@ border: none;</string>
                 <widget class="QLabel" name="forecast_icon4">
                  <property name="geometry">
                   <rect>
-                   <x>19</x>
+                   <x>50</x>
                    <y>60</y>
                    <width>50</width>
                    <height>50</height>
@@ -417,9 +424,42 @@ color: rgb(252, 191, 130);</string>
                 <widget class="QLabel" name="forecast_temp4">
                  <property name="geometry">
                   <rect>
-                   <x>80</x>
-                   <y>70</y>
-                   <width>221</width>
+                   <x>120</x>
+                   <y>10</y>
+                   <width>191</width>
+                   <height>40</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Adobe Caslon Pro</family>
+                   <pointsize>18</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(173, 167, 220);border: none;</string>
+                 </property>
+                 <property name="text">
+                  <string>Please wait..</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="forecast_time4">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>10</y>
+                   <width>111</width>
                    <height>40</height>
                   </rect>
                  </property>
@@ -438,34 +478,6 @@ color: rgb(252, 191, 130);</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">color: rgb(173, 167, 220);border: none;</string>
-                 </property>
-                 <property name="text">
-                  <string>Please wait..</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="forecast_time4">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>10</y>
-                   <width>94</width>
-                   <height>40</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>30</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Adobe Caslon Pro</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
                   <string notr="true">border: none;</string>
                  </property>
                  <property name="text">
@@ -479,8 +491,8 @@ color: rgb(252, 191, 130);</string>
                  <property name="geometry">
                   <rect>
                    <x>120</x>
-                   <y>0</y>
-                   <width>181</width>
+                   <y>50</y>
+                   <width>191</width>
                    <height>61</height>
                   </rect>
                  </property>
@@ -488,6 +500,8 @@ color: rgb(252, 191, 130);</string>
                   <font>
                    <family>Adobe Caslon Pro</family>
                    <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -531,9 +545,9 @@ border: none;</string>
                 <widget class="QLabel" name="forecast_temp1">
                  <property name="geometry">
                   <rect>
-                   <x>80</x>
-                   <y>70</y>
-                   <width>221</width>
+                   <x>120</x>
+                   <y>10</y>
+                   <width>191</width>
                    <height>40</height>
                   </rect>
                  </property>
@@ -546,7 +560,7 @@ border: none;</string>
                  <property name="font">
                   <font>
                    <family>Adobe Caslon Pro</family>
-                   <pointsize>12</pointsize>
+                   <pointsize>18</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -557,11 +571,14 @@ border: none;</string>
                  <property name="text">
                   <string>Please wait..</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                 <widget class="QLabel" name="forecast_icon1">
                  <property name="geometry">
                   <rect>
-                   <x>20</x>
+                   <x>50</x>
                    <y>60</y>
                    <width>50</width>
                    <height>50</height>
@@ -601,9 +618,9 @@ color: rgb(252, 191, 130);</string>
                 <widget class="QLabel" name="forecast_time1">
                  <property name="geometry">
                   <rect>
-                   <x>0</x>
+                   <x>20</x>
                    <y>10</y>
-                   <width>85</width>
+                   <width>101</width>
                    <height>40</height>
                   </rect>
                  </property>
@@ -617,6 +634,8 @@ color: rgb(252, 191, 130);</string>
                   <font>
                    <family>Adobe Caslon Pro</family>
                    <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -633,8 +652,8 @@ color: rgb(252, 191, 130);</string>
                  <property name="geometry">
                   <rect>
                    <x>120</x>
-                   <y>0</y>
-                   <width>181</width>
+                   <y>50</y>
+                   <width>191</width>
                    <height>61</height>
                   </rect>
                  </property>
@@ -642,6 +661,8 @@ color: rgb(252, 191, 130);</string>
                   <font>
                    <family>Adobe Caslon Pro</family>
                    <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -685,40 +706,9 @@ border: none;</string>
                 <widget class="QLabel" name="forecast_time2">
                  <property name="geometry">
                   <rect>
-                   <x>0</x>
+                   <x>20</x>
                    <y>10</y>
-                   <width>85</width>
-                   <height>40</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>30</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Adobe Caslon Pro</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">border: none;</string>
-                 </property>
-                 <property name="text">
-                  <string>+6 Hours</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="forecast_temp2">
-                 <property name="geometry">
-                  <rect>
-                   <x>80</x>
-                   <y>70</y>
-                   <width>221</width>
+                   <width>101</width>
                    <height>40</height>
                   </rect>
                  </property>
@@ -737,16 +727,52 @@ border: none;</string>
                   </font>
                  </property>
                  <property name="styleSheet">
+                  <string notr="true">border: none;</string>
+                 </property>
+                 <property name="text">
+                  <string>+6 Hours</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="forecast_temp2">
+                 <property name="geometry">
+                  <rect>
+                   <x>120</x>
+                   <y>10</y>
+                   <width>191</width>
+                   <height>40</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Adobe Caslon Pro</family>
+                   <pointsize>18</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
                   <string notr="true">color: rgb(173, 167, 220);border: none;</string>
                  </property>
                  <property name="text">
                   <string>Please wait..</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                 <widget class="QLabel" name="forecast_icon2">
                  <property name="geometry">
                   <rect>
-                   <x>19</x>
+                   <x>50</x>
                    <y>60</y>
                    <width>50</width>
                    <height>50</height>
@@ -787,8 +813,8 @@ color: rgb(252, 191, 130);</string>
                  <property name="geometry">
                   <rect>
                    <x>120</x>
-                   <y>0</y>
-                   <width>181</width>
+                   <y>50</y>
+                   <width>191</width>
                    <height>61</height>
                   </rect>
                  </property>
@@ -796,6 +822,8 @@ color: rgb(252, 191, 130);</string>
                   <font>
                    <family>Adobe Caslon Pro</family>
                    <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -867,7 +895,9 @@ border: none;</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -928,7 +958,7 @@ color: rgb(252, 191, 130);</string>
                     <rect>
                      <x>70</x>
                      <y>50</y>
-                     <width>201</width>
+                     <width>141</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -941,7 +971,7 @@ color: rgb(252, 191, 130);</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
@@ -958,7 +988,7 @@ color: rgb(252, 191, 130);</string>
                     <rect>
                      <x>70</x>
                      <y>110</y>
-                     <width>191</width>
+                     <width>131</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -971,7 +1001,7 @@ color: rgb(252, 191, 130);</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
@@ -1031,7 +1061,7 @@ color: rgb(252, 191, 130);</string>
                     <rect>
                      <x>70</x>
                      <y>169</y>
-                     <width>261</width>
+                     <width>151</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1044,7 +1074,7 @@ color: rgb(252, 191, 130);</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
@@ -1247,7 +1277,9 @@ border: none;</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1308,7 +1340,7 @@ color: rgb(252, 191, 130);</string>
                     <rect>
                      <x>70</x>
                      <y>50</y>
-                     <width>201</width>
+                     <width>141</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1321,7 +1353,7 @@ color: rgb(252, 191, 130);</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
@@ -1338,7 +1370,7 @@ color: rgb(252, 191, 130);</string>
                     <rect>
                      <x>70</x>
                      <y>110</y>
-                     <width>211</width>
+                     <width>151</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1351,7 +1383,7 @@ color: rgb(252, 191, 130);</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
@@ -1411,7 +1443,7 @@ color: rgb(252, 191, 130);</string>
                     <rect>
                      <x>70</x>
                      <y>169</y>
-                     <width>221</width>
+                     <width>151</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1424,7 +1456,7 @@ color: rgb(252, 191, 130);</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
@@ -1619,7 +1651,9 @@ border: none;</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1680,7 +1714,7 @@ color: rgb(252, 191, 130);</string>
                     <rect>
                      <x>70</x>
                      <y>50</y>
-                     <width>211</width>
+                     <width>141</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1693,7 +1727,7 @@ color: rgb(252, 191, 130);</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
@@ -1710,7 +1744,7 @@ color: rgb(252, 191, 130);</string>
                     <rect>
                      <x>70</x>
                      <y>110</y>
-                     <width>191</width>
+                     <width>131</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1723,7 +1757,7 @@ color: rgb(252, 191, 130);</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
@@ -1783,7 +1817,7 @@ color: rgb(252, 191, 130);</string>
                     <rect>
                      <x>70</x>
                      <y>169</y>
-                     <width>191</width>
+                     <width>131</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1796,7 +1830,7 @@ color: rgb(252, 191, 130);</string>
                    <property name="font">
                     <font>
                      <family>Adobe Caslon Pro</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
@@ -1983,7 +2017,7 @@ background: none;</string>
 color: rgb(252, 255, 255)</string>
                </property>
                <property name="text">
-                <string>&lt;&lt;&lt; FORECAST FOR NEXT 3 DAYS &gt;&gt;&gt;</string>
+                <string> FORECAST FOR NEXT 3 DAYS</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -2047,8 +2081,8 @@ border-radius: 20px;</string>
                    <widget class="QLabel" name="label_14">
                     <property name="geometry">
                      <rect>
-                      <x>300</x>
-                      <y>70</y>
+                      <x>270</x>
+                      <y>50</y>
                       <width>50</width>
                       <height>50</height>
                      </rect>
@@ -2151,8 +2185,8 @@ color: rgb(252, 191, 130);</string>
                    <widget class="QLabel" name="label_16">
                     <property name="geometry">
                      <rect>
-                      <x>20</x>
-                      <y>70</y>
+                      <x>10</x>
+                      <y>50</y>
                       <width>50</width>
                       <height>50</height>
                      </rect>
@@ -2185,69 +2219,13 @@ color: rgb(252, 191, 130);</string>
                      <bool>true</bool>
                     </property>
                    </widget>
-                   <widget class="QLabel" name="sunrise_label1_2">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>19</y>
-                      <width>161</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                      <underline>true</underline>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>TEMPERATURE</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="latitude_label1_2">
-                    <property name="geometry">
-                     <rect>
-                      <x>290</x>
-                      <y>19</y>
-                      <width>111</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                      <underline>true</underline>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>HUMIDITY</string>
-                    </property>
-                   </widget>
                    <widget class="QLabel" name="temparature_label">
                     <property name="geometry">
                      <rect>
-                      <x>80</x>
-                      <y>80</y>
-                      <width>141</width>
-                      <height>40</height>
+                      <x>60</x>
+                      <y>49</y>
+                      <width>191</width>
+                      <height>51</height>
                      </rect>
                     </property>
                     <property name="minimumSize">
@@ -2259,7 +2237,7 @@ color: rgb(252, 191, 130);</string>
                     <property name="font">
                      <font>
                       <family>Adobe Caslon Pro</family>
-                      <pointsize>14</pointsize>
+                      <pointsize>20</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
                      </font>
@@ -2274,10 +2252,10 @@ color: rgb(252, 191, 130);</string>
                    <widget class="QLabel" name="humidity_label">
                     <property name="geometry">
                      <rect>
-                      <x>350</x>
-                      <y>80</y>
-                      <width>141</width>
-                      <height>40</height>
+                      <x>320</x>
+                      <y>49</y>
+                      <width>191</width>
+                      <height>51</height>
                      </rect>
                     </property>
                     <property name="minimumSize">
@@ -2289,7 +2267,7 @@ color: rgb(252, 191, 130);</string>
                     <property name="font">
                      <font>
                       <family>Adobe Caslon Pro</family>
-                      <pointsize>14</pointsize>
+                      <pointsize>20</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
                      </font>
@@ -2434,8 +2412,8 @@ border-radius: 20px;</string>
                    <widget class="QLabel" name="label_17">
                     <property name="geometry">
                      <rect>
-                      <x>300</x>
-                      <y>70</y>
+                      <x>260</x>
+                      <y>50</y>
                       <width>50</width>
                       <height>50</height>
                      </rect>
@@ -2538,8 +2516,8 @@ color: rgb(252, 191, 130);</string>
                    <widget class="QLabel" name="label_20">
                     <property name="geometry">
                      <rect>
-                      <x>20</x>
-                      <y>70</y>
+                      <x>10</x>
+                      <y>50</y>
                       <width>50</width>
                       <height>50</height>
                      </rect>
@@ -2572,69 +2550,13 @@ color: rgb(252, 191, 130);</string>
                      <bool>true</bool>
                     </property>
                    </widget>
-                   <widget class="QLabel" name="sunrise_label1_3">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>19</y>
-                      <width>131</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                      <underline>true</underline>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>WIND</string>
-                    </property>
-                   </widget>
-                   <widget class="QLabel" name="latitude_label1_3">
-                    <property name="geometry">
-                     <rect>
-                      <x>290</x>
-                      <y>19</y>
-                      <width>101</width>
-                      <height>40</height>
-                     </rect>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Adobe Caslon Pro</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                      <underline>true</underline>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>SUNRISE</string>
-                    </property>
-                   </widget>
                    <widget class="QLabel" name="wind_label">
                     <property name="geometry">
                      <rect>
-                      <x>80</x>
-                      <y>80</y>
-                      <width>141</width>
-                      <height>40</height>
+                      <x>60</x>
+                      <y>49</y>
+                      <width>191</width>
+                      <height>51</height>
                      </rect>
                     </property>
                     <property name="minimumSize">
@@ -2646,7 +2568,7 @@ color: rgb(252, 191, 130);</string>
                     <property name="font">
                      <font>
                       <family>Adobe Caslon Pro</family>
-                      <pointsize>14</pointsize>
+                      <pointsize>20</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
                      </font>
@@ -2661,10 +2583,10 @@ color: rgb(252, 191, 130);</string>
                    <widget class="QLabel" name="sunrise_label">
                     <property name="geometry">
                      <rect>
-                      <x>350</x>
-                      <y>80</y>
-                      <width>141</width>
-                      <height>40</height>
+                      <x>310</x>
+                      <y>49</y>
+                      <width>201</width>
+                      <height>51</height>
                      </rect>
                     </property>
                     <property name="minimumSize">
@@ -2676,7 +2598,7 @@ color: rgb(252, 191, 130);</string>
                     <property name="font">
                      <font>
                       <family>Adobe Caslon Pro</family>
-                      <pointsize>14</pointsize>
+                      <pointsize>21</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
                      </font>
@@ -2720,33 +2642,12 @@ color: rgb(252, 191, 130);</string>
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
-              <item row="0" column="0" alignment="Qt::AlignTop">
-               <widget class="QLabel" name="label_4">
-                <property name="font">
-                 <font>
-                  <family>Open Sans Extrabold</family>
-                  <pointsize>15</pointsize>
-                  <weight>50</weight>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">color: rgb(252, 255, 255)</string>
-                </property>
-                <property name="text">
-                 <string>Weather Information For:</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
+              <item row="0" column="0">
                <widget class="QLabel" name="weather_location">
                 <property name="font">
                  <font>
                   <family>Adobe Kaiti Std R</family>
-                  <pointsize>13</pointsize>
+                  <pointsize>22</pointsize>
                   <weight>75</weight>
                   <italic>false</italic>
                   <bold>true</bold>
@@ -2787,31 +2688,17 @@ color: rgb(252, 191, 130);</string>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout">
                 <item>
-                 <widget class="QLabel" name="label_5">
+                 <widget class="QLabel" name="label_last_update">
                   <property name="font">
                    <font>
-                    <family>Adobe Garamond Pro Bold</family>
                     <pointsize>12</pointsize>
                     <weight>75</weight>
+                    <italic>false</italic>
                     <bold>true</bold>
                    </font>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">border: none;
-color: rgb(252, 255, 255)</string>
-                  </property>
                   <property name="text">
-                   <string>&lt;&lt;&lt; CURRENT WEATHER &gt;&gt;&gt;</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLabel" name="label_last_update">
-                  <property name="text">
-                   <string>TextLabel</string>
+                   <string>Last Updated on </string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -3028,9 +2915,9 @@ color: rgb(255, 255, 255);</string>
                 <property name="font">
                  <font>
                   <family>Arial</family>
-                  <pointsize>16</pointsize>
-                  <weight>50</weight>
-                  <bold>false</bold>
+                  <pointsize>22</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -3041,7 +2928,7 @@ border-radius: 10px;</string>
                  <string>&lt;&lt;&lt; DATE &gt;&gt;&gt;</string>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignCenter</set>
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                 </property>
                </widget>
               </item>
@@ -3063,7 +2950,7 @@ border-radius: 10px;</string>
 color: rgb(252, 255, 255)</string>
              </property>
              <property name="text">
-              <string>&lt;&lt;&lt; FORECAST FOR NEXT 12 HOURS &gt;&gt;&gt;</string>
+              <string>FORECAST FOR NEXT 12 HOURS</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
