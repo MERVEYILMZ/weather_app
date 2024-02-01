@@ -9,6 +9,7 @@ from PyQt5.uic import loadUi
 from datetime import datetime
 from PyQt5 import QtGui, QtCore
 import requests
+import json
 
 
 class MainWindow(QMainWindow):
@@ -46,7 +47,9 @@ class MainWindow(QMainWindow):
     def retrieve_weather_data(self, lat, lon):
         try:
             result = self.weather_api_client.get_weather_data(lat, lon)
-            print(result)
+            #print(result)
+            self.retrieve_hours_forecast(result)
+            self.retrieve_daily_forecast(result)
             
             # Navigate through the nested dictionary to get the required data
             weather_data = result['weather_data']['current']
@@ -162,6 +165,25 @@ class MainWindow(QMainWindow):
         """
         self.country_list.setStyleSheet(style)
         self.city_list.setStyleSheet(style)
+
+    def retrieve_hours_forecast(self, api_response):
+        current_time = datetime.utcfromtimestamp(api_response['weather_data']['current']['dt'])
+        print (current_time)
+
+        hours_relative_to_current = [3, 6, 9, 12]
+
+        result_json = WeatherApiClient.get_hourly_weather_info(api_response,current_time, hours_relative_to_current)
+
+        print(json.dumps(result_json, indent=2))
+
+    def retrieve_daily_forecast(self, api_response):
+        current_time = datetime.utcfromtimestamp(api_response['weather_data']['current']['dt'])
+        
+        days_relative_to_current = [1, 2, 3]
+
+        result_daily_json = WeatherApiClient.get_daily_weather_info(api_response, current_time, days_relative_to_current)
+
+        print(json.dumps(result_daily_json, indent=2))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
