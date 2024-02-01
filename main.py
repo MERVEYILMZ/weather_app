@@ -39,6 +39,7 @@ class MainWindow(QMainWindow):
         # Call this function whenever needed, preferably currentIndexChanged for city
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
 
+############################################################################################################
 
     # Display the current time and date.
     def update_datetime_label(self):
@@ -107,11 +108,16 @@ class MainWindow(QMainWindow):
         for i in range(1, 5):
             temp_label = getattr(self, f"forecast_temp{i}")
             icon_label = getattr(self, f"forecast_icon{i}")
+            hourly_weather_label = getattr(self, f"hourly_weather_label{i}")
             data = hourly_data[i * 3 - 3]  # 0, 3, 6, 9 for +3, +6, +9, +12 hours
             temp_c = data['temp'] - 273.15
             icon_url = f"http://openweathermap.org/img/wn/{data['weather'][0]['icon']}.png"
-            temp_label.setText(f"{temp_c:.1f}°C")
+            temp_label.setText(f"Temperature: {temp_c:.1f}°C")
             self.set_icon(icon_label, icon_url)
+            
+            # Set the weather description to the corresponding label
+            hourly_weather_description = data['weather'][0]['description']
+            hourly_weather_label.setText(hourly_weather_description)
 
 ############################################################################################################
     def update_daily_forecast(self, daily_data):
@@ -132,7 +138,7 @@ class MainWindow(QMainWindow):
             wind_speed = data['wind_speed']
 
             # Update labels with forecast data
-            temp_label.setText(f"{temp_day:.1f}°C")
+            temp_label.setText(f"Temperature: {temp_day:.1f}°C")
             hum_label.setText(f"Humidity: {humidity}%")
             wind_label.setText(f"Wind: {wind_speed} m/s")
 
@@ -218,3 +224,5 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
+
+############################################################################################################
