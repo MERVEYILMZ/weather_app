@@ -172,7 +172,7 @@ QComboBox QAbstractItemView {
                 <x>0</x>
                 <y>0</y>
                 <width>1278</width>
-                <height>439</height>
+                <height>423</height>
                </rect>
               </property>
               <property name="maximumSize">
@@ -2242,27 +2242,47 @@ color: rgb(252, 191, 130);</string>
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
-               <widget class="QLabel" name="label_5">
-                <property name="font">
-                 <font>
-                  <family>Adobe Garamond Pro Bold</family>
-                  <pointsize>12</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border: none;
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                 <widget class="QLabel" name="label_5">
+                  <property name="font">
+                   <font>
+                    <family>Adobe Garamond Pro Bold</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border: none;
 color: rgb(252, 255, 255)</string>
-                </property>
-                <property name="text">
-                 <string>&lt;&lt;&lt; CURRENT WEATHER &gt;&gt;&gt;</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
+                  </property>
+                  <property name="text">
+                   <string>&lt;&lt;&lt; CURRENT WEATHER &gt;&gt;&gt;</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_last_update">
+                  <property name="text">
+                   <string>TextLabel</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
              </layout>
             </widget>
@@ -2468,11 +2488,13 @@ color: rgb(255, 255, 255);</string>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_6">
+               <widget class="QLabel" name="date_label">
                 <property name="font">
                  <font>
-                  <family>Sitka Banner</family>
-                  <pointsize>14</pointsize>
+                  <family>Arial</family>
+                  <pointsize>16</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
