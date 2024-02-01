@@ -29,10 +29,12 @@ class MainWindow(QMainWindow):
         city_name = self.city_list.currentText()
         if city_name:
             city_data = self.collection.find_one({"city_municipality": city_name})
+            print(city_data)
             if city_data:
                 lat = city_data.get('lat')
                 lon = city_data.get('lon')
                 self.retrieve_weather_data(lat, lon)
+                self.weather_location.setText(f"{city_name}, {city_data.get('state_province')}, {city_data.get('population')} ")
 ############################################################################################################
     def retrieve_weather_data(self, lat, lon):
         try:
@@ -46,6 +48,7 @@ class MainWindow(QMainWindow):
             last_update = datetime.fromtimestamp(weather_data['dt'])
             formatted_last_update = last_update.strftime("%d %b - %H:%M")
             self.label_last_update.setText(f"<i>Last Updated on {formatted_last_update}</i>")
+            
         except KeyError as e:
             print(f"Key error: {e}")
         except Exception as e:
