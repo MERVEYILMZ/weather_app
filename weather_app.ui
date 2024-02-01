@@ -642,9 +642,9 @@ border: none;</string>
                   <widget class="QLabel" name="forecast_time1_2">
                    <property name="geometry">
                     <rect>
-                     <x>19</x>
+                     <x>-1</x>
                      <y>0</y>
-                     <width>261</width>
+                     <width>411</width>
                      <height>41</height>
                     </rect>
                    </property>
@@ -908,9 +908,9 @@ border: none;</string>
                   <widget class="QLabel" name="forecast_time1_4">
                    <property name="geometry">
                     <rect>
-                     <x>19</x>
+                     <x>-1</x>
                      <y>0</y>
-                     <width>261</width>
+                     <width>411</width>
                      <height>41</height>
                     </rect>
                    </property>
@@ -1085,7 +1085,7 @@ color: rgb(252, 191, 130);</string>
                   <widget class="QLabel" name="forecast_wind1_2">
                    <property name="geometry">
                     <rect>
-                     <x>76</x>
+                     <x>80</x>
                      <y>169</y>
                      <width>221</width>
                      <height>40</height>
@@ -1174,9 +1174,9 @@ border: none;</string>
                   <widget class="QLabel" name="forecast_time1_5">
                    <property name="geometry">
                     <rect>
-                     <x>19</x>
+                     <x>-1</x>
                      <y>0</y>
-                     <width>261</width>
+                     <width>411</width>
                      <height>41</height>
                     </rect>
                    </property>
