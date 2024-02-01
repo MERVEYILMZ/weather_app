@@ -642,9 +642,9 @@ border: none;</string>
                   <widget class="QLabel" name="forecast_time1_2">
                    <property name="geometry">
                     <rect>
-                     <x>19</x>
+                     <x>-1</x>
                      <y>0</y>
-                     <width>261</width>
+                     <width>411</width>
                      <height>41</height>
                     </rect>
                    </property>
@@ -706,16 +706,19 @@ color: rgb(252, 191, 130);</string>
                    <property name="text">
                     <string/>
                    </property>
+                   <property name="pixmap">
+                    <pixmap>images/temperature.png</pixmap>
+                   </property>
                    <property name="scaledContents">
                     <bool>true</bool>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="forecast_temp1_2">
+                  <widget class="QLabel" name="forecast_temp1_1">
                    <property name="geometry">
                     <rect>
                      <x>80</x>
                      <y>50</y>
-                     <width>129</width>
+                     <width>181</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -740,12 +743,12 @@ color: rgb(252, 191, 130);</string>
                     <string>Please wait..</string>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="forecast_temp1_3">
+                  <widget class="QLabel" name="forecast_hum1_1">
                    <property name="geometry">
                     <rect>
                      <x>80</x>
                      <y>110</y>
-                     <width>129</width>
+                     <width>191</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -806,16 +809,19 @@ color: rgb(252, 191, 130);</string>
                    <property name="text">
                     <string/>
                    </property>
+                   <property name="pixmap">
+                    <pixmap>images/humidity.png</pixmap>
+                   </property>
                    <property name="scaledContents">
                     <bool>true</bool>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="forecast_temp1_4">
+                  <widget class="QLabel" name="forecast_wind1_1">
                    <property name="geometry">
                     <rect>
                      <x>76</x>
                      <y>169</y>
-                     <width>129</width>
+                     <width>261</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -876,6 +882,9 @@ color: rgb(252, 191, 130);</string>
                    <property name="text">
                     <string/>
                    </property>
+                   <property name="pixmap">
+                    <pixmap>images/wind.png</pixmap>
+                   </property>
                    <property name="scaledContents">
                     <bool>true</bool>
                    </property>
@@ -899,9 +908,9 @@ border: none;</string>
                   <widget class="QLabel" name="forecast_time1_4">
                    <property name="geometry">
                     <rect>
-                     <x>19</x>
+                     <x>-1</x>
                      <y>0</y>
-                     <width>261</width>
+                     <width>411</width>
                      <height>41</height>
                     </rect>
                    </property>
@@ -963,16 +972,19 @@ color: rgb(252, 191, 130);</string>
                    <property name="text">
                     <string/>
                    </property>
+                   <property name="pixmap">
+                    <pixmap>images/temperature.png</pixmap>
+                   </property>
                    <property name="scaledContents">
                     <bool>true</bool>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="forecast_temp1_8">
+                  <widget class="QLabel" name="forecast_temp1_2">
                    <property name="geometry">
                     <rect>
                      <x>80</x>
                      <y>50</y>
-                     <width>129</width>
+                     <width>191</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -997,12 +1009,12 @@ color: rgb(252, 191, 130);</string>
                     <string>Please wait..</string>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="forecast_temp1_9">
+                  <widget class="QLabel" name="forecast_hum1_2">
                    <property name="geometry">
                     <rect>
                      <x>80</x>
                      <y>110</y>
-                     <width>129</width>
+                     <width>211</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1063,16 +1075,19 @@ color: rgb(252, 191, 130);</string>
                    <property name="text">
                     <string/>
                    </property>
+                   <property name="pixmap">
+                    <pixmap>images/humidity.png</pixmap>
+                   </property>
                    <property name="scaledContents">
                     <bool>true</bool>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="forecast_temp1_10">
+                  <widget class="QLabel" name="forecast_wind1_2">
                    <property name="geometry">
                     <rect>
-                     <x>76</x>
+                     <x>80</x>
                      <y>169</y>
-                     <width>129</width>
+                     <width>221</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1133,6 +1148,9 @@ color: rgb(252, 191, 130);</string>
                    <property name="text">
                     <string/>
                    </property>
+                   <property name="pixmap">
+                    <pixmap>images/wind.png</pixmap>
+                   </property>
                    <property name="scaledContents">
                     <bool>true</bool>
                    </property>
@@ -1156,9 +1174,9 @@ border: none;</string>
                   <widget class="QLabel" name="forecast_time1_5">
                    <property name="geometry">
                     <rect>
-                     <x>19</x>
+                     <x>-1</x>
                      <y>0</y>
-                     <width>261</width>
+                     <width>411</width>
                      <height>41</height>
                     </rect>
                    </property>
@@ -1220,16 +1238,19 @@ color: rgb(252, 191, 130);</string>
                    <property name="text">
                     <string/>
                    </property>
+                   <property name="pixmap">
+                    <pixmap>images/temperature.png</pixmap>
+                   </property>
                    <property name="scaledContents">
                     <bool>true</bool>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="forecast_temp1_11">
+                  <widget class="QLabel" name="forecast_temp1_3">
                    <property name="geometry">
                     <rect>
                      <x>80</x>
                      <y>50</y>
-                     <width>129</width>
+                     <width>191</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1254,12 +1275,12 @@ color: rgb(252, 191, 130);</string>
                     <string>Please wait..</string>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="forecast_temp1_12">
+                  <widget class="QLabel" name="forecast_hum1_3">
                    <property name="geometry">
                     <rect>
                      <x>80</x>
                      <y>110</y>
-                     <width>129</width>
+                     <width>191</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1320,16 +1341,19 @@ color: rgb(252, 191, 130);</string>
                    <property name="text">
                     <string/>
                    </property>
+                   <property name="pixmap">
+                    <pixmap>images/humidity.png</pixmap>
+                   </property>
                    <property name="scaledContents">
                     <bool>true</bool>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="forecast_temp1_13">
+                  <widget class="QLabel" name="forecast_wind1_3">
                    <property name="geometry">
                     <rect>
                      <x>76</x>
                      <y>169</y>
-                     <width>129</width>
+                     <width>191</width>
                      <height>40</height>
                     </rect>
                    </property>
@@ -1389,6 +1413,9 @@ color: rgb(252, 191, 130);</string>
                    </property>
                    <property name="text">
                     <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap>images/wind.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
