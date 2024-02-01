@@ -1351,7 +1351,7 @@ color: rgb(252, 191, 130);</string>
                   <widget class="QLabel" name="forecast_wind1_3">
                    <property name="geometry">
                     <rect>
-                     <x>76</x>
+                     <x>80</x>
                      <y>169</y>
                      <width>191</width>
                      <height>40</height>
