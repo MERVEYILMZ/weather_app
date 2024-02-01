@@ -1,6 +1,7 @@
 import requests
 from settings import OPENWEATHER_KEY, MONGODB_URI
 from pymongo import MongoClient
+from datetime import datetime, timedelta
 
 class WeatherApiClient:
     def __init__(self):
@@ -17,13 +18,16 @@ class WeatherApiClient:
             city = city_data["city_municipality"]
             country = city_data["country"]
             api_url = f'https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={self.exclude}&appid={self.api_key}'
-            response = requests.get(api_url)
-
-            if response.status_code == 200:
+            
+            try:
+                response = requests.get(api_url)
+                response.raise_for_status()
                 weather_data = response.json()
                 return {"city": city, "country": country, "weather_data": weather_data}
-            else:
-                print(f"Error: Unable to fetch weather data. Status code: {response.status_code}")
+
+            except requests.RequestException as e:
+                print(f"Error: Unable to fetch weather data. {e}")
 
         else:
-            print(f"Error: City data not found for lat={lat}, lon={lon}")
+            print(f"Error: City data not found in MondoDB for lat={lat}, lon={lon}")
+

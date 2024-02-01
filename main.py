@@ -6,6 +6,9 @@ from PyQt5.uic import loadUi
 from datetime import datetime
 from PyQt5 import QtGui, QtCore
 import requests
+from pymongo import MongoClient, DESCENDING
+from weather_api import WeatherApiClient
+from settings import MONGODB_URI
 
 ############################################################################################################
 class MainWindow(QMainWindow):
@@ -33,9 +36,6 @@ class MainWindow(QMainWindow):
     def retrieve_weather_data(self, lat, lon):
         try:
             result = self.weather_api_client.get_weather_data(lat, lon)
-            print(result)
-            
-            # Navigate through the nested dictionary to get the required data
             weather_data = result['weather_data']['current']
             hourly_data = result['weather_data']['hourly']
             daily_data = result['weather_data']['daily']
@@ -160,10 +160,10 @@ class MainWindow(QMainWindow):
         """
         self.country_list.setStyleSheet(style)
         self.city_list.setStyleSheet(style)
+############################################################################################################
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
-
