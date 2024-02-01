@@ -39,11 +39,13 @@ class MainWindow(QMainWindow):
         # Call this function whenever needed, preferably currentIndexChanged for city
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
 
-    def update_datetime_label(self):
-        bugun = QDateTime.currentDateTime()
-        tarih_ve_saat = bugun.toString("dd-MM-yyyy HH:mm")
-        self.date_label.setText(tarih_ve_saat)
 
+
+    def update_datetime_label(self):
+        today = QDateTime.currentDateTime()
+        date = today.toString("dd-MM-yyyy HH:mm")
+        self.date_label.setText(date)
+############################################################################################################
 
     def city_changed(self):
         city_name = self.city_list.currentText()
