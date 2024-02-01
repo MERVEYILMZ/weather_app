@@ -2488,11 +2488,13 @@ color: rgb(255, 255, 255);</string>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_6">
+               <widget class="QLabel" name="date_label">
                 <property name="font">
                  <font>
-                  <family>Sitka Banner</family>
-                  <pointsize>14</pointsize>
+                  <family>Arial</family>
+                  <pointsize>16</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
