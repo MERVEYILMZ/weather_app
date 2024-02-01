@@ -6,7 +6,9 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QComboBox, QCompleter
 from PyQt5.QtCore import QStringListModel
 from PyQt5.uic import loadUi
-
+from datetime import datetime
+from PyQt5 import QtGui, QtCore
+import requests
 
 
 class MainWindow(QMainWindow):
@@ -16,21 +18,90 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("WeatherApp")
         self.connect_mongodb()
         self.populate_country_list()
-        self.populate_city_list()
+        #self.populate_city_list()
         self.country_list.currentIndexChanged.connect(self.populate_city_list)
+        self.city_list.currentIndexChanged.connect(self.city_changed)  # Connect signal to the new slot
         self.setup_completers()
         self.setup_styles()
 
-        #generate weatherapiclient with init
+        # Generate WeatherApiClient with init
         self.weather_api_client = WeatherApiClient()
 
-        # call this function whenever needed, preferably currentindexchanged for city
-        self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
+        # Call this function whenever needed, preferably currentIndexChanged for city
+        # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
+
+    def city_changed(self):
+        # Get the selected city name
+        city_name = self.city_list.currentText()
+        if city_name:
+            # Fetch the latitude and longitude from your MongoDB database
+            city_data = self.collection.find_one({"city_municipality": city_name})
+            if city_data:
+                lat = city_data.get('lat')
+                lon = city_data.get('lon')
+                # Call the method to update the weather information
+                self.retrieve_weather_data(lat, lon)
 
 
-    def retrieve_weather_data(self,lat,lon):
-        result = self.weather_api_client.get_weather_data(lat, lon)
-        print (result)
+    def retrieve_weather_data(self, lat, lon):
+        try:
+            result = self.weather_api_client.get_weather_data(lat, lon)
+            print(result)
+            
+            # Navigate through the nested dictionary to get the required data
+            weather_data = result['weather_data']['current']
+            temperature_k = weather_data['temp']  # Temperature in Kelvin
+            humidity = weather_data['humidity']
+            wind_speed = weather_data['wind_speed']
+            sunrise = weather_data['sunrise']
+            weather_description = weather_data['weather'][0]['description']
+            weather_icon = weather_data['weather'][0]['icon']
+
+            # Convert Kelvin to Celsius for display
+            temperature_c = temperature_k - 273.15
+            
+            weather_description = weather_data['weather'][0]['description']
+            
+            # Set the weather description
+            self.current_weather_label.setText(weather_description)
+
+            # Update the labels with the data
+            self.temparature_label.setText(f"{temperature_c:.2f}°C")  # Display temperature in Celsius
+            self.humidity_label.setText(f"{humidity}%")
+            self.wind_label.setText(f"{wind_speed} m/s")
+            
+            # Convert the sunrise UNIX timestamp to a readable format
+            sunrise_time = datetime.fromtimestamp(sunrise).strftime('%H:%M:%S')
+            self.sunrise_label.setText(sunrise_time)
+
+            # Set the weather icon
+            icon_url = f"http://openweathermap.org/img/wn/{weather_icon}.png"  # Example URL, adjust as needed
+            self.current_weather_icon.setPixmap(QtGui.QPixmap(icon_url))
+
+            # Set the weather description
+            self.current_weather_label.setText(weather_description)
+            
+            weather_icon = weather_data['weather'][0]['icon']
+            icon_url = f"http://openweathermap.org/img/wn/{weather_icon}.png"
+            
+            
+            try:
+                response = requests.get(icon_url)
+                response.raise_for_status()  # Raise an error on a bad status
+                pixmap = QtGui.QPixmap()
+                pixmap.loadFromData(response.content)
+                self.current_weather_icon.setPixmap(pixmap)
+            except requests.exceptions.RequestException as e:
+                print(f"Failed to download icon: {e}")
+                
+            
+        except KeyError as e:
+            print(f"Key error: {e}")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
+            
+    
 
 
     def connect_mongodb(self):
