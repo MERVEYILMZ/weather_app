@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1280</width>
-    <height>966</height>
+    <height>964</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -78,7 +78,7 @@ color: #fff;</string>
          <x>0</x>
          <y>0</y>
          <width>1280</width>
-         <height>966</height>
+         <height>964</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -149,135 +149,7 @@ QComboBox QAbstractItemView {
            <property name="spacing">
             <number>0</number>
            </property>
-           <item row="5" column="0">
-            <widget class="QProgressBar" name="progressBar">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>10</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>10</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QProgressBar{
-	background-color: rgb(27, 29, 35);
-	border-style: none;
-	border-radius: 10px;
-	text-align: center;
-	color: rgb(255, 0, 0)
-}
-QProgressBar::chunk{
-	background-color: qlineargradient(spread:pad, x1:0, y1:0.506, x2:1, y2:0.494, stop:0 rgba(252, 192, 125, 255), stop:1 rgba(255, 255, 255, 255));
-	border-radius: 5px;
-}</string>
-             </property>
-             <property name="minimum">
-              <number>0</number>
-             </property>
-             <property name="value">
-              <number>0</number>
-             </property>
-             <property name="textVisible">
-              <bool>false</bool>
-             </property>
-             <property name="invertedAppearance">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QFrame" name="header_frame">
-             <property name="styleSheet">
-              <string notr="true">	background-color: rgb(27, 29, 35);</string>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_3">
-              <item>
-               <widget class="QLabel" name="app_logo">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>80</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>80</width>
-                  <height>80</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>images/white-logo.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="app_name">
-                <property name="font">
-                 <font>
-                  <family>Adobe Garamond Pro Bold</family>
-                  <pointsize>45</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border: none;
-color: rgb(255, 255, 255);</string>
-                </property>
-                <property name="text">
-                 <string>InfoTechWeatherApp              </string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_6">
-                <property name="font">
-                 <font>
-                  <family>Sitka Banner</family>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">padding: 5px;
-border-radius: 10px;</string>
-                </property>
-                <property name="text">
-                 <string>&lt;&lt;&lt; DATE &gt;&gt;&gt;</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item row="10" column="0">
+           <item row="9" column="0">
             <widget class="QScrollArea" name="scrollArea_2">
              <property name="minimumSize">
               <size>
@@ -1557,29 +1429,7 @@ color: rgb(252, 255, 255)</string>
              </widget>
             </widget>
            </item>
-           <item row="9" column="0">
-            <widget class="QLabel" name="label_7">
-             <property name="font">
-              <font>
-               <family>Adobe Garamond Pro Bold</family>
-               <pointsize>12</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: rgb(252, 255, 255)</string>
-             </property>
-             <property name="text">
-              <string>&lt;&lt;&lt; FORECAST FOR NEXT 12 HOURS &gt;&gt;&gt;</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
+           <item row="6" column="0">
             <widget class="QFrame" name="frame">
              <property name="styleSheet">
               <string notr="true">QFrame{border-top: 2px solid rgb(154, 148, 196)}</string>
@@ -1828,7 +1678,7 @@ color: rgb(252, 191, 130);</string>
                      <string>HUMIDITY</string>
                     </property>
                    </widget>
-                   <widget class="QLabel" name="sunrise_label_2">
+                   <widget class="QLabel" name="temparature_label">
                     <property name="geometry">
                      <rect>
                       <x>80</x>
@@ -1858,7 +1708,7 @@ color: rgb(252, 191, 130);</string>
                      <string>Please wait..</string>
                     </property>
                    </widget>
-                   <widget class="QLabel" name="longitude_label_2">
+                   <widget class="QLabel" name="humidity_label">
                     <property name="geometry">
                      <rect>
                       <x>350</x>
@@ -1916,65 +1766,78 @@ color: rgb(252, 191, 130);</string>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_4">
-                    <item>
-                     <widget class="QLabel" name="current_weather_icon">
-                      <property name="minimumSize">
-                       <size>
-                        <width>100</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>100</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border: none;
+                   <widget class="QLabel" name="current_weather_icon">
+                    <property name="geometry">
+                     <rect>
+                      <x>21</x>
+                      <y>0</y>
+                      <width>155</width>
+                      <height>150</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>155</width>
+                      <height>150</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>155</width>
+                      <height>150</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border: none;
 background: none;</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                      <property name="pixmap">
-                       <pixmap>:/weather/icons/weather/png/027-location.png</pixmap>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>true</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="current_weather_label">
-                      <property name="font">
-                       <font>
-                        <family>Adobe Caslon Pro</family>
-                        <pointsize>12</pointsize>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border: none;
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap>:/weather/icons/weather/png/027-location.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="current_weather_label">
+                    <property name="geometry">
+                     <rect>
+                      <x>9</x>
+                      <y>131</y>
+                      <width>181</width>
+                      <height>50</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Adobe Caslon Pro</family>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border: none;
 padding: 15px;
 color: rgb(255, 255, 255);
 background: none;</string>
-                      </property>
-                      <property name="text">
-                       <string>Please wait.. </string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                      <property name="wordWrap">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
+                    </property>
+                    <property name="text">
+                     <string>Please wait.. </string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
                   </widget>
                  </item>
                  <item>
@@ -2202,7 +2065,7 @@ color: rgb(252, 191, 130);</string>
                      <string>SUNRISE</string>
                     </property>
                    </widget>
-                   <widget class="QLabel" name="sunrise_label_3">
+                   <widget class="QLabel" name="wind_label">
                     <property name="geometry">
                      <rect>
                       <x>80</x>
@@ -2232,7 +2095,7 @@ color: rgb(252, 191, 130);</string>
                      <string>Please wait..</string>
                     </property>
                    </widget>
-                   <widget class="QLabel" name="longitude_label_3">
+                   <widget class="QLabel" name="sunrise_label">
                     <property name="geometry">
                      <rect>
                       <x>350</x>
@@ -2337,7 +2200,7 @@ color: rgb(252, 191, 130);</string>
              </layout>
             </widget>
            </item>
-           <item row="6" column="0">
+           <item row="5" column="0">
             <widget class="QFrame" name="message_frame">
              <property name="minimumSize">
               <size>
@@ -2351,34 +2214,30 @@ color: rgb(252, 191, 130);</string>
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <widget class="QLabel" name="label_5">
-              <property name="geometry">
-               <rect>
-                <x>6</x>
-                <y>6</y>
-                <width>248</width>
-                <height>20</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <family>Adobe Garamond Pro Bold</family>
-                <pointsize>12</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">border: none;
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="font">
+                 <font>
+                  <family>Adobe Garamond Pro Bold</family>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: none;
 color: rgb(252, 255, 255)</string>
-              </property>
-              <property name="text">
-               <string>&lt;&lt;&lt; CURRENT WEATHER &gt;&gt;&gt;</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
+                </property>
+                <property name="text">
+                 <string>&lt;&lt;&lt; CURRENT WEATHER &gt;&gt;&gt;</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
            <item row="1" column="0">
@@ -2518,6 +2377,112 @@ color: rgb(0, 0, 0);</string>
                <bool>false</bool>
               </property>
              </widget>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QFrame" name="header_frame">
+             <property name="styleSheet">
+              <string notr="true">	background-color: rgb(27, 29, 35);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="app_logo">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>80</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/white-logo.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="app_name">
+                <property name="font">
+                 <font>
+                  <family>Adobe Garamond Pro Bold</family>
+                  <pointsize>45</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: none;
+color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>InfoTechWeatherApp              </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="font">
+                 <font>
+                  <family>Sitka Banner</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">padding: 5px;
+border-radius: 10px;</string>
+                </property>
+                <property name="text">
+                 <string>&lt;&lt;&lt; DATE &gt;&gt;&gt;</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="font">
+              <font>
+               <family>Adobe Garamond Pro Bold</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+color: rgb(252, 255, 255)</string>
+             </property>
+             <property name="text">
+              <string>&lt;&lt;&lt; FORECAST FOR NEXT 12 HOURS &gt;&gt;&gt;</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
             </widget>
            </item>
           </layout>
