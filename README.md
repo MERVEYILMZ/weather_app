@@ -1,6 +1,6 @@
 
 # InfoTech Weather Application (10-days challenge project)
-![InfoTechWeatherApp](InfoTechWeatherApp.png)
+![InfoTechWeatherApp](images/InfoTechWeatherApp.png)
 
 ## Project Overview
 This project is a Weather Application with a graphical user interface designed to provide real-time weather information through a user-friendly graphical interface. This project is crafted over a period of 10 days. The application covers weather details for the Netherlands, Belgium, and the USA. The project utilizes PyQT5 for GUI, Scrapy for web scraping city data, HTTP-Request and API for real-time weather data, and MongoDB for efficient data storage.
