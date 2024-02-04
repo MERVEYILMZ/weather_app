@@ -1,7 +1,9 @@
-# InfoTech Weather Application
+
+# InfoTech Weather Application (10-days challenge project)
+![InfoTechWeatherApp](InfoTechWeatherApp.png)
 
 ## Project Overview
-This project is a Weather Application with a graphical user interface designed to provide real-time weather information. The application covers weather details for at least three countries: the Netherlands, Germany, and the USA.
+This project is a Weather Application with a graphical user interface designed to provide real-time weather information through a user-friendly graphical interface. This project is crafted over a period of 10 days. The application covers weather details for the Netherlands, Belgium, and the USA. The project utilizes PyQT5 for GUI, Scrapy for web scraping city data, HTTP-Request and API for real-time weather data, and MongoDB for efficient data storage.
 
 ### Features
 - **Country Selection:** Upon starting the application, users are prompted to select a country.
@@ -12,19 +14,33 @@ This project is a Weather Application with a graphical user interface designed t
   - The population
   - Current weather (represented as an icon)
   - Temperature
-- **City Search Functionality:** Users can search for a city to view its detailed information and current weather conditions.
+- **City Search Functionality:** Users can search for a city to view its information and current weather conditions.
 
 ## Tools and Technologies
-- **Graphical User Interface (GUI):** PyQT5
-- **Web Scraping:** Scrapy
-- **Networking:** HTTP-Request and APIs for fetching real-time weather data
-- **Database Management System (DBMS):** MongoDB
 
-## Meeting Schedule
-- **Project Kick-off / Sprint Planning Meeting:** 27-01-2024
-- **Daily Scrum Meeting:** Every day
-- **Retrospective Meeting / Sprint Planning Meeting:** 01-02-2024
-- **Sprint Review:** 08-01-2024
+- **Python 3.10.11:** Main programming language.
+- **PyQt5 Designer 5.14.1:** For designing the Graphical User Interface (GUI) components.
+- **Trello:** For task management and Agile project tracking.
+- **GitHub:** For version control and collaborative development.
+- **pgAdmin 4 (7.8):** PostgreSQL database management tool.
+- **dbdiagram.io:** For designing and documenting the database schema.
+- **app.diagrams.net:** For creating UML diagrams.
+- **Scrapy:** Web Scraping
+- **Networking:** HTTP-Request and APIs for fetching real-time weather data
+- **MongoDB:** Database Management System (DBMS)
+
+## IDE
+**Visual Studio Code:** Recommended IDE for development with support for Python and version control.
+
+## Project Management
+- Agile methodologies ensure that the project adapts to change quickly and efficiently.
+- Regular meetings and use of Trello boards for task tracking and progress updates.
+
+## Organized Meetings 
+- **Project Kick-off / Sprint Planning Meeting:** 
+- **Daily Scrum Meetings:** Every day
+- **Retrospective Meeting / Sprint Planning Meeting
+- **Sprint Review
 
 ## SPRINT-1
 1. **Design GUI for App**
@@ -62,9 +78,9 @@ This project is a Weather Application with a graphical user interface designed t
    - Selected City Next 3 days forecast
 
 ## Program/Output
-- Finalize the application to run on Windows.
-- Generate a “.EXE” file and share it.
-- Follow the instructions in the provided video to make the application work like a normal program without Python.
+- Generation of a “.EXE” file of the application to run on Windows.
 
 ## Installation
-(Provide detailed step-by-step installation instructions here. Include how to set up PyQT5, Scrapy, MongoDB, and any other necessary tools or dependencies.)
+- Clone the repository:
+git clone https://github.com/MERVEYILMZ/weather_app.git
+cd weather_app
