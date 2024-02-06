@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QComboBox, QCompleter, QLabel
-from PyQt5.QtCore import QStringListModel
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QPushButton, QComboBox, QCompleter, QLabel
+from PyQt5.QtCore import QStringListModel, QSize
+from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.uic import loadUi
 from datetime import datetime
 from PyQt5 import QtGui, QtCore
@@ -11,6 +11,9 @@ from weather_api import WeatherApiClient
 from settings import MONGODB_URI
 from datetime import datetime, timedelta
 from PyQt5.QtCore import QTimer, QDateTime
+
+
+
 
 ############################################################################################################
 class MainWindow(QMainWindow):
@@ -24,6 +27,11 @@ class MainWindow(QMainWindow):
         self.city_list.currentIndexChanged.connect(self.city_changed)
         self.setup_completers()
         self.setup_styles()
+        self.set_info_icon()
+        
+        self.info_button.clicked.connect(self.show_app_info)
+
+
 
         # Display the current time and date.
         self.update_datetime_label()
@@ -37,6 +45,26 @@ class MainWindow(QMainWindow):
 
         # Call this function whenever needed, preferably currentIndexChanged for city
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
+
+############################################################################################################        
+    def set_info_icon(self):
+        pixmap = QPixmap('images/info_icon.png')  # Load the image into a QPixmap
+        icon = QIcon(pixmap)  # Create an icon from the pixmap
+        self.info_button.setIcon(icon)  # Set the icon for the button
+        self.info_button.setIconSize(QSize(35,35))  # Set the icon size to the size of the pixmap
+
+############################################################################################################    
+        
+    def show_app_info(self):
+        info_text = (
+            "WeatherApp Version: 1.0.0\n"
+            "Developed by: [InfoTech Team 2]\n"
+            "Release Date: [06/02/2024]\n"
+            "Contact Info: [info@infotechweatherapp.com]\n"
+            "\n"
+            "For more information, visit: [https://github.com/MERVEYILMZ/weather_app]"
+        )
+        QMessageBox.information(self, "Application Information", info_text)
 
 ############################################################################################################
 
@@ -228,3 +256,4 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 
 ############################################################################################################
+ 

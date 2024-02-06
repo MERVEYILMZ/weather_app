@@ -2849,6 +2849,28 @@ color: rgb(0, 0, 0);</string>
              </widget>
             </widget>
            </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="font">
+              <font>
+               <family>Adobe Garamond Pro Bold</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+color: rgb(252, 255, 255)</string>
+             </property>
+             <property name="text">
+              <string>FORECAST FOR NEXT 12 HOURS</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
            <item row="0" column="0">
             <widget class="QFrame" name="header_frame">
              <property name="styleSheet">
@@ -2893,6 +2915,12 @@ color: rgb(0, 0, 0);</string>
               </item>
               <item>
                <widget class="QLabel" name="app_name">
+                <property name="maximumSize">
+                 <size>
+                  <width>700</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                 <property name="font">
                  <font>
                   <family>Adobe Garamond Pro Bold</family>
@@ -2928,33 +2956,41 @@ border-radius: 10px;</string>
                  <string>&lt;&lt;&lt; DATE &gt;&gt;&gt;</string>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="info_button">
+                <property name="minimumSize">
+                 <size>
+                  <width>35</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>35</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>1</pointsize>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 20px;</string>
+                </property>
+                <property name="text">
+                 <string/>
                 </property>
                </widget>
               </item>
              </layout>
-            </widget>
-           </item>
-           <item row="8" column="0">
-            <widget class="QLabel" name="label_7">
-             <property name="font">
-              <font>
-               <family>Adobe Garamond Pro Bold</family>
-               <pointsize>12</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: rgb(252, 255, 255)</string>
-             </property>
-             <property name="text">
-              <string>FORECAST FOR NEXT 12 HOURS</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
             </widget>
            </item>
           </layout>
@@ -2967,6 +3003,8 @@ color: rgb(252, 255, 255)</string>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images/info_icon.png"/>
+ </resources>
  <connections/>
 </ui>
