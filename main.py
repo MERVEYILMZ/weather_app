@@ -11,8 +11,8 @@ from weather_api import WeatherApiClient
 from settings import MONGODB_URI
 from datetime import datetime, timedelta
 from PyQt5.QtCore import QTimer, QDateTime
-
-
+import requests
+from math import radians, sin, cos, sqrt, atan2
 
 
 ############################################################################################################
@@ -31,8 +31,6 @@ class MainWindow(QMainWindow):
         
         self.info_button.clicked.connect(self.show_app_info)
 
-
-
         # Display the current time and date.
         self.update_datetime_label()
         timer = QTimer(self)
@@ -42,6 +40,8 @@ class MainWindow(QMainWindow):
 
         # Generate WeatherApiClient with init
         self.weather_api_client = WeatherApiClient()
+
+        self.set_client_ip()
 
         # Call this function whenever needed, preferably currentIndexChanged for city
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
@@ -247,6 +247,73 @@ class MainWindow(QMainWindow):
         """
         self.country_list.setStyleSheet(style)
         self.city_list.setStyleSheet(style)
+
+############################################################################################################
+        
+    def get_client_ip(self):
+        try:
+            response = requests.get('https://api.ipify.org?format=json')
+            data = response.json()
+            return data['ip']
+        except Exception as e:
+            print(f"Error fetching IP address: {e}")
+            return None
+
+############################################################################################################
+        
+    def get_location_info(self, ip_address):
+        url = f"http://ip-api.com/json/{ip_address}"
+        response = requests.get(url)
+        data = response.json()
+        return data["lat"],data["lon"]
+
+    def calculate_distance(self,lat1, lon1, lat2, lon2):
+        # Radius of the Earth in km
+        R = 6371.0
+        # Convert latitude and longitude from degrees to radians
+        lat1 = radians(lat1)
+        lon1 = radians(lon1)
+        lat2 = radians(lat2)
+        lon2 = radians(lon2)
+        # Calculate the change in coordinates
+        dlon = lon2 - lon1
+        dlat = lat2 - lat1
+        # Calculate the distance using Haversine formula
+        a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+        c = 2 * atan2(sqrt(a), sqrt(1 - a))
+        distance = R * c
+        return distance
+    
+############################################################################################################
+    
+    def set_client_ip(self):
+        client_ip = self.get_client_ip()
+        customer_lat, customer_lon =  self.get_location_info(client_ip)
+
+        closest_city = None
+        closest_country = None
+        min_distance = float("inf")
+
+        for city in self.collection.find():
+            city_lat = city["lat"]
+            city_lon = city["lon"]
+            distance = self.calculate_distance(customer_lat, customer_lon, city_lat, city_lon)
+            if distance < min_distance:
+                min_distance = distance
+                closest_city = city["city_municipality"]
+                closest_country = city["country"]
+                print(closest_city)
+
+        if closest_city is None or closest_country is None:
+            self.country_list.setCurrentText("Netherlands")
+            self.city_list.setCurrentText("Amsterdam")
+        else:
+            self.country_list.setCurrentText(closest_country)
+            self.city_list.setCurrentText(closest_city)
+        self.city_changed()
+
+        print(f"Client's IP address: {client_ip} // Closest city is {closest_city}")
+
 ############################################################################################################
 
 if __name__ == "__main__":
@@ -256,4 +323,3 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 
 ############################################################################################################
- 
