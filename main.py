@@ -66,39 +66,6 @@ class MainWindow(QMainWindow):
         )
         QMessageBox.information(self, "Application Information", info_text)
 
-    # Display the current time and date.
-    def update_datetime_label(self):
-        today = QDateTime.currentDateTime()
-        date = today.toString("dd-MM-yyyy HH:mm")
-        self.date_label.setText(date)
-        date1 = today.addDays(1)
-        date1_ = date1.toString("dd-MM-yyyy")
-        self.forecast_time1_2.setText(date1_)
-        date2 = today.addDays(2)
-        date2_ = date2.toString("dd-MM-yyyy")
-        self.forecast_time1_4.setText(date2_)
-        date3 = today.addDays(3)
-        date3_ = date3.toString("dd-MM-yyyy")
-        self.forecast_time1_5.setText(date3_)
-
-
-        # Call this function whenever needed, preferably currentIndexChanged for city
-        # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
-
-
-############################################################################################################    
-        
-    def show_app_info(self):
-        info_text = (
-            "WeatherApp Version: 1.0.0\n"
-            "Developed by: [InfoTech Team 2]\n"
-            "Release Date: [06/02/2024]\n"
-            "Contact Info: [info@infotechweatherapp.com]\n"
-            "\n"
-            "For more information, visit: [https://github.com/MERVEYILMZ/weather_app]"
-        )
-        QMessageBox.information(self, "Application Information", info_text)
-
 ############################################################################################################
 
     # Display the current time and date.
