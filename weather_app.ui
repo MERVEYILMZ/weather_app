@@ -172,7 +172,7 @@ QComboBox QAbstractItemView {
                 <x>0</x>
                 <y>0</y>
                 <width>1278</width>
-                <height>438</height>
+                <height>426</height>
                </rect>
               </property>
               <property name="maximumSize">
@@ -1083,7 +1083,7 @@ color: rgb(252, 191, 130);</string>
                     <string notr="true">color: rgb(173, 167, 220);border: none;</string>
                    </property>
                    <property name="text">
-                    <string>sgdgsdgg</string>
+                    <string>Please wait..</string>
                    </property>
                   </widget>
                   <widget class="QLabel" name="forecast_icon1_4">

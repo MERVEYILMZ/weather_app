@@ -27,6 +27,9 @@ class MainWindow(QMainWindow):
         self.city_list.currentIndexChanged.connect(self.city_changed)
         self.setup_completers()
         self.setup_styles()
+        self.set_info_icon()
+        
+        self.info_button.clicked.connect(self.show_app_info)
 
         # Display the current time and date.
         self.update_datetime_label()
@@ -43,6 +46,25 @@ class MainWindow(QMainWindow):
         # Call this function whenever needed, preferably currentIndexChanged for city
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
 
+############################################################################################################        
+    def set_info_icon(self):
+        pixmap = QPixmap('images/info_icon.png')  # Load the image into a QPixmap
+        icon = QIcon(pixmap)  # Create an icon from the pixmap
+        self.info_button.setIcon(icon)  # Set the icon for the button
+        self.info_button.setIconSize(QSize(35,35))  # Set the icon size to the size of the pixmap
+
+############################################################################################################    
+        
+    def show_app_info(self):
+        info_text = (
+            "WeatherApp Version: 1.0.0\n"
+            "Developed by: [InfoTech Team 2]\n"
+            "Release Date: [06/02/2024]\n"
+            "Contact Info: [info@infotechweatherapp.com]\n"
+            "\n"
+            "For more information, visit: [https://github.com/MERVEYILMZ/weather_app]"
+        )
+        QMessageBox.information(self, "Application Information", info_text)
 
     # Display the current time and date.
     def update_datetime_label(self):
@@ -63,12 +85,6 @@ class MainWindow(QMainWindow):
         # Call this function whenever needed, preferably currentIndexChanged for city
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
 
-############################################################################################################        
-    def set_info_icon(self):
-        pixmap = QPixmap('images/info_icon.png')  # Load the image into a QPixmap
-        icon = QIcon(pixmap)  # Create an icon from the pixmap
-        self.info_button.setIcon(icon)  # Set the icon for the button
-        self.info_button.setIconSize(QSize(35,35))  # Set the icon size to the size of the pixmap
 
 ############################################################################################################    
         
@@ -161,7 +177,6 @@ class MainWindow(QMainWindow):
             icon_url = f"http://openweathermap.org/img/wn/{data['weather'][0]['icon']}.png"
             temp_label.setText(f"{temp_c:.1f}°C")
             self.set_icon(icon_label, icon_url)
-
             
             # Set the weather description to the corresponding label
             hourly_weather_description = data['weather'][0]['description']
@@ -187,8 +202,8 @@ class MainWindow(QMainWindow):
 
             # Update labels with forecast data
             temp_label.setText(f"{temp_day:.1f}°C")
-            hum_label.setText(f"Humidity: {humidity}%")
-            wind_label.setText(f"Wind: {wind_speed} m/s")
+            hum_label.setText(f"{humidity}%")
+            wind_label.setText(f"{wind_speed} m/s")
 
             icon_url_day = f"http://openweathermap.org/img/wn/{data['weather'][0]['icon']}.png"
             forecast_weather_label.setText(weather_desc)
@@ -265,7 +280,9 @@ class MainWindow(QMainWindow):
         """
         self.country_list.setStyleSheet(style)
         self.city_list.setStyleSheet(style)
+
 ############################################################################################################
+        
     def get_client_ip(self):
         try:
             response = requests.get('https://api.ipify.org?format=json')
@@ -275,6 +292,8 @@ class MainWindow(QMainWindow):
             print(f"Error fetching IP address: {e}")
             return None
 
+############################################################################################################
+        
     def get_location_info(self, ip_address):
         url = f"http://ip-api.com/json/{ip_address}"
         response = requests.get(url)
@@ -297,6 +316,8 @@ class MainWindow(QMainWindow):
         c = 2 * atan2(sqrt(a), sqrt(1 - a))
         distance = R * c
         return distance
+    
+############################################################################################################
     
     def set_client_ip(self):
         client_ip = self.get_client_ip()
@@ -325,6 +346,8 @@ class MainWindow(QMainWindow):
         self.city_changed()
 
         print(f"Client's IP address: {client_ip} // Closest city is {closest_city}")
+
+############################################################################################################
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
