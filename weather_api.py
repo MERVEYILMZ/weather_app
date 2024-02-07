@@ -12,6 +12,23 @@ class WeatherApiClient:
         self.exclude = "minutely,alerts"
 
     def get_weather_data(self, lat, lon):
+        """
+        Retrieves weather data for a given latitude and longitude using the OpenWeatherMap API.
+
+        Args:
+            lat (float): The latitude coordinate of the location.
+            lon (float): The longitude coordinate of the location.
+
+        Returns:
+            dict: A dictionary containing the following keys:
+                - 'city': The name of the city corresponding to the latitude and longitude.
+                - 'country': The name of the country corresponding to the latitude and longitude.
+                - 'weather_data': A dictionary containing weather data retrieved from the OpenWeatherMap API.
+                This dictionary structure follows the format specified by the OpenWeatherMap API documentation.
+
+        Prints an error message if city data is not found in the MongoDB collection for the provided latitude and longitude.
+        Prints an error message if there is an issue fetching weather data from the OpenWeatherMap API.
+        """
         city_data = self.collection.find_one({"lat": lat, "lon": lon})
 
         if city_data:
