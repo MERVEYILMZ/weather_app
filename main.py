@@ -13,6 +13,7 @@ from datetime import datetime, timedelta
 from PyQt5.QtCore import QTimer, QDateTime
 import requests
 from math import radians, sin, cos, sqrt, atan2
+import pytz
 
 
 ############################################################################################################
@@ -71,7 +72,7 @@ class MainWindow(QMainWindow):
     # Display the current time and date.
     def update_datetime_label(self):
         today = QDateTime.currentDateTime()
-        date = today.toString("dd-MM-yyyy HH:mm")
+        date = today.toString("dd-MM-yyyy HH:mm:ss")
         self.date_label.setText(date)
         date1 = today.addDays(1)
         date1_ = date1.toString("dd-MM-yyyy")
@@ -89,7 +90,6 @@ class MainWindow(QMainWindow):
         city_name = self.city_list.currentText()
         if city_name:
             city_data = self.collection.find_one({"city_municipality": city_name})
-            print(city_data)
             if city_data:
                 lat = city_data.get('lat')
                 lon = city_data.get('lon')
@@ -100,11 +100,11 @@ class MainWindow(QMainWindow):
     def retrieve_weather_data(self, lat, lon):
         try:
             result = self.weather_api_client.get_weather_data(lat, lon)
-            print(result)
             weather_data = result['weather_data']['current']
             hourly_data = result['weather_data']['hourly']
             daily_data = result['weather_data']['daily']
-            self.update_current_weather(weather_data)
+            timezone = result['weather_data']['timezone']
+            self.update_current_weather(weather_data, timezone)
             self.update_hourly_forecast(hourly_data)
             self.update_daily_forecast(daily_data)
             last_update = datetime.fromtimestamp(weather_data['dt'])
@@ -117,7 +117,7 @@ class MainWindow(QMainWindow):
             print(f"An error occurred: {e}")
 
 ############################################################################################################
-    def update_current_weather(self, weather_data):
+    def update_current_weather(self, weather_data,timezone):
         temperature_c = weather_data['temp'] - 273.15
         humidity = weather_data['humidity']
         wind_speed = weather_data['wind_speed']
@@ -129,8 +129,9 @@ class MainWindow(QMainWindow):
         self.temparature_label.setText(f"{temperature_c:.2f}°C")
         self.humidity_label.setText(f"{humidity}%")
         self.wind_label.setText(f"{wind_speed} m/s")
-        sunrise_time = datetime.fromtimestamp(sunrise).strftime('%H:%M:%S')
-        self.sunrise_label.setText(sunrise_time)
+        sunrise_time = datetime.fromtimestamp(sunrise, pytz.timezone(timezone))
+        sunrise_formatted = sunrise_time.strftime('%H:%M:%S')
+        self.sunrise_label.setText(sunrise_formatted)
         self.current_weather_label.setText(weather_description)
         self.set_icon(self.current_weather_icon, icon_url)
 ############################################################################################################
@@ -205,6 +206,7 @@ class MainWindow(QMainWindow):
 ############################################################################################################
 
     def populate_city_list(self):
+        self.city_list.setCurrentText("")
         self.city_list.clear()
         filter_statu = self.country_list.currentText()
         filter = {'country': filter_statu}
@@ -302,16 +304,29 @@ class MainWindow(QMainWindow):
                 min_distance = distance
                 closest_city = city["city_municipality"]
                 closest_country = city["country"]
-                print(closest_city)
+                #print(closest_city)
 
         if closest_city is None or closest_country is None:
-            self.country_list.setCurrentText("Netherlands")
-            self.city_list.setCurrentText("Amsterdam")
+            self.country_list.setCurrentIndex(0)
+            self.city_list.setCurrentIndex(0)
         else:
-            self.country_list.setCurrentText(closest_country)
-            self.city_list.setCurrentText(closest_city)
-        self.city_changed()
-
+            for index in range(self.country_list.count()):
+                item_text = self.country_list.itemText(index)
+                if closest_country.lower() in item_text.lower():
+                    self.country_list.setCurrentIndex(index)
+                    break 
+            matched_index = -1
+            # Iterate through combo box items to find a match
+            for index in range(self.city_list.count()):
+                item_text = self.city_list.itemText(index)
+                if closest_city.lower() in item_text.lower():
+                    matched_index = index
+                    self.city_list.setCurrentIndex(index)
+                    break 
+            if matched_index == -1:
+                self.country_list.setCurrentIndex(0)
+                self.city_list.setCurrentIndex(0)
+                
         print(f"Client's IP address: {client_ip} // Closest city is {closest_city}")
 
 ############################################################################################################
