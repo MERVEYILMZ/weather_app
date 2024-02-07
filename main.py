@@ -253,6 +253,13 @@ class MainWindow(QMainWindow):
 ############################################################################################################
         
     def get_client_ip(self):
+        """
+        Fetches the public IP address of the client.
+
+        Returns:
+            str: The public IP address of the client.
+                Returns None if there is an error fetching the IP address.
+        """
         try:
             response = requests.get('https://api.ipify.org?format=json')
             data = response.json()
@@ -264,12 +271,33 @@ class MainWindow(QMainWindow):
 ############################################################################################################
         
     def get_location_info(self, ip_address):
+        """
+        Retrieves the latitude and longitude information for a given IP address.
+
+        Args:
+            ip_address (str): The IP address for which location information is requested.
+
+        Returns:
+            tuple: A tuple containing the latitude and longitude information extracted from the IP address.
+        """
         url = f"http://ip-api.com/json/{ip_address}"
         response = requests.get(url)
         data = response.json()
         return data["lat"],data["lon"]
 
     def calculate_distance(self,lat1, lon1, lat2, lon2):
+        """
+        Calculates the distance between two points on the Earth's surface using the Haversine formula.
+
+        Args:
+            lat1 (float): Latitude of the first point.
+            lon1 (float): Longitude of the first point.
+            lat2 (float): Latitude of the second point.
+            lon2 (float): Longitude of the second point.
+
+        Returns:
+            float: The distance between the two points in kilometers.
+        """
         # Radius of the Earth in km
         R = 6371.0
         # Convert latitude and longitude from degrees to radians
@@ -289,6 +317,13 @@ class MainWindow(QMainWindow):
 ############################################################################################################
     
     def set_client_ip(self):
+        """
+        Sets the client's IP address and determines the closest city and country based on IP geolocation.
+
+        Sets the current index of the country and city combo boxes to match the closest city and country.
+        If no match is found, it sets both combo boxes to index 0.
+
+        """
         client_ip = self.get_client_ip()
         customer_lat, customer_lon =  self.get_location_info(client_ip)
 
