@@ -14,13 +14,19 @@ from PyQt5.QtCore import QTimer, QDateTime
 import requests
 from math import radians, sin, cos, sqrt, atan2
 import pytz
+import os
 
 
 ############################################################################################################
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-        loadUi('weather_app.ui', self)
+        # loadUi('weather_app.ui', self)
+
+        current_dir = os.path.dirname(os.path.realpath(__file__))  # Geçerli betiğin bulunduğu dizin
+        ui_file = os.path.join(current_dir, "weather_app.ui")  # UI dosyasının tam yolu
+        loadUi(ui_file, self)
+      
         self.setWindowTitle("WeatherApp")
         self.connect_mongodb()
         self.populate_country_list()
