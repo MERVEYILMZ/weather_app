@@ -172,7 +172,7 @@ QComboBox QAbstractItemView {
                 <x>0</x>
                 <y>0</y>
                 <width>1278</width>
-                <height>426</height>
+                <height>427</height>
                </rect>
               </property>
               <property name="maximumSize">
@@ -2983,10 +2983,21 @@ border-radius: 10px;</string>
                  <enum>Qt::LeftToRight</enum>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-radius: 20px;</string>
+                 <string notr="true">border-radius: 20px;
+</string>
                 </property>
                 <property name="text">
                  <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>images/info_icon.png</normaloff>images/info_icon.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
                 </property>
                </widget>
               </item>

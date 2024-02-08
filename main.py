@@ -34,7 +34,7 @@ class MainWindow(QMainWindow):
         self.city_list.currentIndexChanged.connect(self.city_changed)
         self.setup_completers()
         self.setup_styles()
-        self.set_info_icon()
+        # self.set_info_icon()
         
         self.info_button.clicked.connect(self.show_app_info)
 
@@ -54,11 +54,11 @@ class MainWindow(QMainWindow):
         # self.retrieve_weather_data(lat=50.8676041, lon=4.3737121)
 
 ############################################################################################################        
-    def set_info_icon(self):
-        pixmap = QPixmap('images/info_icon.png')  # Load the image into a QPixmap
-        icon = QIcon(pixmap)  # Create an icon from the pixmap
-        self.info_button.setIcon(icon)  # Set the icon for the button
-        self.info_button.setIconSize(QSize(35,35))  # Set the icon size to the size of the pixmap
+    # def set_info_icon(self):
+    #     pixmap = QPixmap('images/info_icon.png')  # Load the image into a QPixmap
+    #     icon = QIcon(pixmap)  # Create an icon from the pixmap
+    #     self.info_button.setIcon(icon)  # Set the icon for the button
+    #     self.info_button.setIconSize(QSize(35,35))  # Set the icon size to the size of the pixmap
 
 ############################################################################################################    
         
